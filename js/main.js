@@ -65,3 +65,74 @@ if (businessPrev && businessNext) {
 
 window.addEventListener("resize", updateBusinessCarousel);
 window.addEventListener("load", updateBusinessCarousel);
+
+/* =========================================================
+   CAREERS ROLE DETAIL LINKS
+========================================================= */
+
+(function () {
+  const careersPage = document.querySelector(".careers-page");
+  const roleCards = document.querySelectorAll(".career-role-card");
+
+  if (!careersPage || !roleCards.length) return;
+
+  const careerRoleLinks = [
+    {
+      slug: "asset-management",
+      label: "Asset Management Analyst"
+    },
+    {
+      slug: "strategy-consulting",
+      label: "Financial Strategy Consulting Associate"
+    },
+    {
+      slug: "market-research",
+      label: "Market Research Associate"
+    },
+    {
+      slug: "japanese-equity",
+      label: "Japanese Equity Investment Analyst"
+    },
+    {
+      slug: "global-trade",
+      label: "Global Trade Intelligence Analyst"
+    },
+    {
+      slug: "institutional-travel",
+      label: "Institutional Travel Coordinator"
+    }
+  ];
+
+  roleCards.forEach((card, index) => {
+    const role = careerRoleLinks[index];
+    const body = card.querySelector(".career-role-body");
+    const applyButton = card.querySelector(".career-apply-btn");
+
+    if (!role || !body || !applyButton) return;
+
+    const detailHref = `./career-detail.html?role=${role.slug}`;
+
+    let actionRow = body.querySelector(".career-action-row");
+
+    if (!actionRow) {
+      actionRow = document.createElement("div");
+      actionRow.className = "career-action-row";
+
+      const detailButton = document.createElement("a");
+      detailButton.className = "career-detail-btn";
+      detailButton.href = detailHref;
+      detailButton.textContent = "View role details";
+
+      applyButton.parentNode.insertBefore(actionRow, applyButton);
+      actionRow.appendChild(detailButton);
+      actionRow.appendChild(applyButton);
+    }
+
+    card.classList.add("career-card-clickable");
+
+    card.addEventListener("click", function (event) {
+      if (event.target.closest("a")) return;
+      window.location.href = detailHref;
+    });
+  });
+})();
