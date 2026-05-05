@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Client Login | Wentworth Hedge Fund</title>
+  <meta
+    name="description"
+    content="Demo client login portal for Wentworth Hedge Fund. Static interface only."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand-link" aria-label="Wentworth Hedge Fund home">
+        <span class="brand-line">Wentworth</span>
+        <span class="brand-line">Hedge Fund</span>
+      </a>
+
+      <button class="menu-toggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="primaryNav" aria-label="Primary navigation">
+        <a href="./what-we-do.html">What We Do</a>
+        <a href="./insights.html">Insights</a>
+        <a href="./market-intelligence.html">Market Intelligence</a>
+        <a href="./our-firm.html">Our Firm</a>
+        <a href="./careers.html">Careers</a>
+        <a href="./client-login.html" class="client-login-link active">Client Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="client-login-page">
+
+    <!-- HERO / LOGIN -->
+    <section class="client-login-hero">
+      <div class="container client-login-grid">
+
+        <!-- LEFT CONTENT -->
+        <div class="client-login-copy">
+          <p class="client-eyebrow">CLIENT PORTAL</p>
+
+          <h1>Institutional access, disciplined reporting.</h1>
+
+          <p>
+            The Wentworth Hedge Fund client portal is designed as a secure environment for
+            institutional communications, portfolio reporting, research distribution, and
+            relationship management.
+          </p>
+
+          <div class="client-login-note">
+            <strong>Demo portal only</strong>
+            <span>
+              This page is a static interface for presentation purposes. Real client authentication
+              is not enabled on this GitHub Pages website.
+            </span>
+          </div>
+
+          <div class="client-feature-grid">
+            <article>
+              <span>01</span>
+              <h3>Portfolio Reporting</h3>
+              <p>Designed for future delivery of periodic performance reviews, allocation summaries, and risk commentary.</p>
+            </article>
+
+            <article>
+              <span>02</span>
+              <h3>Research Access</h3>
+              <p>Framework for distributing macro briefs, market intelligence, and company-level research publications.</p>
+            </article>
+
+            <article>
+              <span>03</span>
+              <h3>Secure Communication</h3>
+              <p>Future implementation should use encrypted authentication, server-side validation, and HTTPS protection.</p>
+            </article>
+          </div>
+        </div>
+
+        <!-- LOGIN CARD -->
+        <aside class="client-login-card" aria-label="Demo client login panel">
+          <div class="client-login-card-header">
+            <p class="client-eyebrow">PRIVATE ACCESS</p>
+            <h2>Client Login</h2>
+            <p>
+              Authorized institutional clients may access reporting and research through a secure portal.
+            </p>
+          </div>
+
+          <form class="client-form" id="demoClientLoginForm">
+            <div class="form-group">
+              <label for="clientId">Client ID</label>
+              <input
+                type="text"
+                id="clientId"
+                name="clientId"
+                placeholder="Demo access only"
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="clientPassword">Password</label>
+              <input
+                type="password"
+                id="clientPassword"
+                name="clientPassword"
+                placeholder="Do not enter a real password"
+                autocomplete="off"
+              />
+            </div>
+
+            <div class="form-row">
+              <label class="remember-row">
+                <input type="checkbox" />
+                <span>Remember this device</span>
+              </label>
+
+              <a href="#" class="forgot-link">Forgot access?</a>
+            </div>
+
+            <button type="submit" class="client-submit-btn">
+              Enter Demo Portal
+            </button>
+
+            <p class="client-form-message" id="clientFormMessage">
+              Demo portal only. No credentials are submitted or stored.
+            </p>
+          </form>
+
+          <div class="client-security-box">
+            <h3>Security Notice</h3>
+            <p>
+              A production client portal requires a secure backend, encrypted credential handling,
+              role-based access control, audit logs, and HTTPS deployment. This static page does not
+              perform authentication.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- PORTAL MODULES -->
+    <section class="client-modules-section">
+      <div class="container">
+        <div class="client-section-heading">
+          <p class="client-eyebrow">PORTAL FRAMEWORK</p>
+          <h2>Designed for future institutional client services.</h2>
+          <p>
+            The current portal is static. The following modules show how a secure production portal
+            could be structured once backend infrastructure is implemented.
+          </p>
+        </div>
+
+        <div class="client-module-grid">
+          <article class="client-module-card">
+            <div class="client-module-icon">
+              <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="18" y="22" width="84" height="76" rx="14" fill="#edf6fc"/>
+                <path d="M34 78 L52 60 L66 70 L88 42" fill="none" stroke="#0b2344" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="34" cy="78" r="5" fill="#0b2344"/>
+                <circle cx="52" cy="60" r="5" fill="#0b2344"/>
+                <circle cx="66" cy="70" r="5" fill="#0b2344"/>
+                <circle cx="88" cy="42" r="5" fill="#0b2344"/>
+              </svg>
+            </div>
+            <h3>Performance Reports</h3>
+            <p>
+              Future access to monthly reporting packages, portfolio commentary, and risk review materials.
+            </p>
+          </article>
+
+          <article class="client-module-card">
+            <div class="client-module-icon">
+              <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="26" y="18" width="68" height="84" rx="12" fill="#edf6fc"/>
+                <path d="M42 42 H78 M42 58 H78 M42 74 H66" stroke="#0b2344" stroke-width="6" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Research Library</h3>
+            <p>
+              Centralized access to macro strategy notes, equity research reports, and market intelligence.
+            </p>
+          </article>
+
+          <article class="client-module-card">
+            <div class="client-module-icon">
+              <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="22" y="48" width="76" height="48" rx="12" fill="#edf6fc"/>
+                <path d="M40 48 V38 C40 26 48 18 60 18 C72 18 80 26 80 38 V48" fill="none" stroke="#0b2344" stroke-width="7" stroke-linecap="round"/>
+                <circle cx="60" cy="72" r="7" fill="#0b2344"/>
+              </svg>
+            </div>
+            <h3>Secure Documents</h3>
+            <p>
+              Intended for future secure delivery of client-specific documents and institutional communications.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACCESS POLICY -->
+    <section class="client-policy-section">
+      <div class="container client-policy-grid">
+        <div>
+          <p class="client-eyebrow">ACCESS POLICY</p>
+          <h2>Private access should be controlled, encrypted, and auditable.</h2>
+        </div>
+
+        <div class="client-policy-content">
+          <p>
+            For a real client portal, Wentworth Hedge Fund would require secure identity verification,
+            encrypted session handling, permission-based document access, and operational monitoring.
+            A static GitHub Pages website is appropriate for presentation and public information, but it
+            should not be used to collect passwords, manage client accounts, or distribute confidential
+            investment materials.
+          </p>
+
+          <p>
+            Future implementation should be supported by a secure backend application, multi-factor
+            authentication, HTTPS-only deployment, and compliance review before any confidential client
+            information is made available online.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand-block">
+        <a href="../index.html" class="brand-link footer-brand-link">
+          <span class="brand-line">Wentworth</span>
+          <span class="brand-line">Hedge Fund</span>
+        </a>
+
+        <p>
+          Independent investment firm with a research-driven, globally informed,
+          and institutionally disciplined approach.
+        </p>
+
+        <p class="copyright">© 2026 Wentworth Hedge Fund. All rights reserved.</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Explore</h4>
+        <a href="./what-we-do.html">What We Do</a>
+        <a href="./insights.html">Insights</a>
+        <a href="./market-intelligence.html">Market Intelligence</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>Firm</h4>
+        <a href="./our-firm.html">Our Firm</a>
+        <a href="./careers.html">Careers</a>
+        <a href="./client-login.html">Client Login</a>
+      </div>
+
+      <div class="footer-column contact-column">
+        <h4>Contact</h4>
+        <p>
+          Wentworth Hedge Fund<br />
+          <a href="mailto:wentworthhedgefund@outlook.com">wentworthhedgefund@outlook.com</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+
+  <script>
+    const demoForm = document.getElementById("demoClientLoginForm");
+    const message = document.getElementById("clientFormMessage");
+
+    demoForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      message.textContent =
+        "Demo portal only. Real authentication is not enabled on this static website.";
+
+      message.classList.add("is-visible");
+
+      document.getElementById("clientId").value = "";
+      document.getElementById("clientPassword").value = "";
+    });
+  </script>
+</body>
+</html>
