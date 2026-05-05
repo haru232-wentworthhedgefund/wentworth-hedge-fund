@@ -62,15 +62,13 @@ input {
   margin: 0 auto;
 }
 
-/* ========================================
-   Header
-======================================== */
+/* Header */
 .site-header {
   position: fixed;
   inset: 0 0 auto 0;
   height: var(--header-height);
   z-index: 1000;
-  background: rgba(217, 232, 246, 0.9);
+  background: rgba(217, 232, 246, 0.92);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid transparent;
   transition: var(--transition);
@@ -171,26 +169,26 @@ input {
   background: var(--navy);
 }
 
-/* ========================================
-   Hero
-======================================== */
+/* Hero */
 .hero-home {
-  padding-top: calc(var(--header-height) + 48px);
-  padding-bottom: 72px;
+  padding-top: calc(var(--header-height) + 54px);
+  padding-bottom: 80px;
   background:
-    linear-gradient(180deg, rgba(247, 251, 255, 0.78) 0%, rgba(234, 243, 251, 0.92) 100%);
+    linear-gradient(180deg, rgba(247, 251, 255, 0.9) 0%, rgba(234, 243, 251, 0.96) 100%);
 }
 
 .hero-grid {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
-  gap: 36px;
+  gap: 44px;
   align-items: center;
-  min-height: calc(100vh - var(--header-height) - 48px);
+  min-height: calc(100vh - var(--header-height) - 80px);
 }
 
 .hero-copy {
-  max-width: 740px;
+  max-width: 760px;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-title,
@@ -206,7 +204,7 @@ input {
 
 .hero-title {
   color: var(--navy);
-  font-size: clamp(3.3rem, 7vw, 6rem);
+  font-size: clamp(3.4rem, 7vw, 6.2rem);
   line-height: 0.92;
   letter-spacing: -0.05em;
   margin-bottom: 24px;
@@ -227,31 +225,34 @@ input {
 
 .hero-media-card {
   position: relative;
+  height: min(56vw, 560px);
+  min-height: 430px;
+  max-height: 580px;
   border-radius: 30px;
   overflow: hidden;
-  min-height: 620px;
   box-shadow: var(--shadow);
   border: 1px solid var(--line);
+  background: var(--sky-2);
 }
 
 .hero-media-card::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(16, 45, 87, 0.05), rgba(16, 45, 87, 0.18));
+  background:
+    linear-gradient(180deg, rgba(16, 45, 87, 0.04), rgba(16, 45, 87, 0.18));
+  pointer-events: none;
 }
 
 .hero-media-image {
   width: 100%;
   height: 100%;
-  min-height: 620px;
   object-fit: cover;
   object-position: center;
+  filter: saturate(0.9) contrast(1.02);
 }
 
-/* ========================================
-   Buttons
-======================================== */
+/* Buttons */
 .btn,
 .card-button,
 .back-link {
@@ -282,19 +283,17 @@ input {
 }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.68);
+  background: rgba(255, 255, 255, 0.72);
   color: var(--navy);
   border: 1px solid var(--line-strong);
 }
 
 .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.88);
+  background: rgba(255, 255, 255, 0.92);
   transform: translateY(-2px);
 }
 
-/* ========================================
-   Sections
-======================================== */
+/* Sections */
 .section {
   padding: 96px 0;
 }
@@ -334,41 +333,49 @@ input {
   max-width: 760px;
 }
 
-/* ========================================
-   Brief cards
-======================================== */
+/* Brief cards */
 .brief-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
 }
 
 .brief-card {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.84);
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-soft);
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 
 .brief-image-link {
   display: block;
+  height: 230px;
+  overflow: hidden;
+  background: var(--sky-2);
 }
 
 .brief-card-image {
   width: 100%;
-  height: 260px;
+  height: 230px;
   object-fit: cover;
   object-position: center;
+  filter: saturate(0.88) contrast(1.04);
+  transition: transform 0.35s ease;
+}
+
+.brief-card:hover .brief-card-image {
+  transform: scale(1.03);
 }
 
 .brief-card-body {
   padding: 26px;
   display: flex;
   flex-direction: column;
-  min-height: 300px;
+  min-height: 320px;
 }
 
 .brief-card h3 {
@@ -388,9 +395,7 @@ input {
   align-self: flex-start;
 }
 
-/* ========================================
-   Business overview carousel
-======================================== */
+/* Business overview carousel */
 .carousel-controls {
   display: flex;
   gap: 12px;
@@ -466,9 +471,7 @@ input {
   color: var(--muted);
 }
 
-/* ========================================
-   Footer
-======================================== */
+/* Footer */
 .site-footer {
   background: #d3e3f2;
   border-top: 1px solid var(--line);
@@ -512,35 +515,38 @@ input {
 }
 
 .footer-contact-list {
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 }
 
 .social-links {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   align-items: center;
+  margin-top: 4px;
 }
 
 .social-links a {
-  width: 42px;
-  height: 42px;
+  width: 28px;
+  height: 28px;
   border-radius: 999px;
-  border: 1px solid var(--line-strong);
+  border: 1px solid rgba(16, 45, 87, 0.18);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.45);
   transition: var(--transition);
 }
 
 .social-links a:hover {
-  background: rgba(255, 255, 255, 0.9);
-  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.85);
+  transform: translateY(-1px);
 }
 
 .social-links svg {
-  width: 19px;
-  height: 19px;
+  width: 14px !important;
+  height: 14px !important;
+  max-width: 14px;
+  max-height: 14px;
   fill: var(--navy);
 }
 
@@ -561,9 +567,7 @@ input {
   max-width: 760px;
 }
 
-/* ========================================
-   Existing inner-page support
-======================================== */
+/* Existing inner-page support */
 .page-shell {
   min-height: 100vh;
   background: var(--sky-4);
@@ -679,9 +683,7 @@ input {
   margin-bottom: 10px;
 }
 
-/* ========================================
-   Responsive
-======================================== */
+/* Responsive */
 @media (max-width: 1180px) {
   .brief-grid,
   .footer-grid,
@@ -694,10 +696,7 @@ input {
   }
 
   .hero-media-card {
-    min-height: 460px;
-  }
-
-  .hero-media-image {
+    height: 460px;
     min-height: 460px;
   }
 }
@@ -771,6 +770,7 @@ input {
   }
 
   .hero-home {
+    padding-top: calc(var(--header-height) + 36px);
     padding-bottom: 56px;
   }
 
@@ -778,16 +778,22 @@ input {
     font-size: clamp(2.9rem, 12vw, 4.6rem);
   }
 
+  .hero-media-card {
+    height: 320px;
+    min-height: 320px;
+  }
+
+  .brief-image-link,
+  .brief-card-image,
+  .business-card-image {
+    height: 220px;
+  }
+
   .brief-card-body,
   .business-body,
   .article-main,
   .article-side-card {
     padding: 22px;
-  }
-
-  .brief-card-image,
-  .business-card-image {
-    height: 220px;
   }
 
   .business-card {
