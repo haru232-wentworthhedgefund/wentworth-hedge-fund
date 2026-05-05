@@ -1,24 +1,24 @@
 const header = document.querySelector(".site-header");
 const menuToggle = document.querySelector(".menu-toggle");
 const siteNav = document.querySelector(".site-nav");
-const navLinks = document.querySelectorAll(".nav-link");
 const yearElement = document.getElementById("currentYear");
 
 if (yearElement) {
   yearElement.textContent = new Date().getFullYear();
 }
 
-function handleHeaderScroll() {
+function updateHeaderOnScroll() {
   if (!header) return;
-  if (window.scrollY > 20) {
+
+  if (window.scrollY > 10) {
     header.classList.add("scrolled");
   } else {
     header.classList.remove("scrolled");
   }
 }
 
-handleHeaderScroll();
-window.addEventListener("scroll", handleHeaderScroll);
+updateHeaderOnScroll();
+window.addEventListener("scroll", updateHeaderOnScroll);
 
 if (menuToggle && siteNav) {
   menuToggle.addEventListener("click", () => {
@@ -27,19 +27,8 @@ if (menuToggle && siteNav) {
   });
 }
 
-navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    if (siteNav && siteNav.classList.contains("is-open")) {
-      siteNav.classList.remove("is-open");
-      if (menuToggle) {
-        menuToggle.setAttribute("aria-expanded", "false");
-      }
-    }
-  });
-});
-
 window.addEventListener("resize", () => {
-  if (window.innerWidth > 960 && siteNav) {
+  if (window.innerWidth > 980 && siteNav) {
     siteNav.classList.remove("is-open");
     if (menuToggle) {
       menuToggle.setAttribute("aria-expanded", "false");
