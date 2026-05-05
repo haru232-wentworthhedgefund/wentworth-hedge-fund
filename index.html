@@ -2,126 +2,134 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Wentworth Hedge Fund</title>
   <meta
     name="description"
-    content="Wentworth Hedge Fund is an independent investment firm focused on institutional discipline, long-term capital stewardship, and research-driven market insights."
+    content="Wentworth Hedge Fund is an independent investment firm focused on institutional discipline, long-term capital stewardship, and research-driven market insight."
   />
-  <link rel="stylesheet" href="css/style.css" />
-  <script defer src="js/main.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
+
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand" aria-label="Wentworth Hedge Fund home">
-        <span>Wentworth</span>
-        <span>Hedge Fund</span>
+      <a href="./index.html" class="brand-link" aria-label="Wentworth Hedge Fund home">
+        <span class="brand-line">Wentworth</span>
+        <span class="brand-line">Hedge Fund</span>
       </a>
 
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a href="pages/what-we-do.html">What We Do</a>
-        <a href="pages/insights.html">Insights</a>
-        <a href="pages/market-intelligence.html">Market Intelligence</a>
-        <a href="pages/our-firm.html">Our Firm</a>
-        <a href="pages/careers.html">Careers</a>
-      </nav>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-      <a class="btn btn-outline btn-sm" href="pages/client-login.html">Client Login</a>
+      <nav class="site-nav" id="primaryNav" aria-label="Primary navigation">
+        <a href="./pages/what-we-do.html">What We Do</a>
+        <a href="./pages/insights.html">Insights</a>
+        <a href="./pages/market-intelligence.html">Market Intelligence</a>
+        <a href="./pages/our-firm.html">Our Firm</a>
+        <a href="./pages/careers.html">Careers</a>
+        <a href="./pages/client-login.html" class="client-login-link">Client Login</a>
+      </nav>
     </div>
   </header>
 
   <main>
     <!-- HERO -->
     <section class="hero">
+      <div class="hero-overlay"></div>
+
       <div class="container hero-inner">
         <div class="hero-content">
-          <p class="hero-kicker">Institutional discipline. Long-term perspective.</p>
           <h1>Capital Entrusted,<br />Vision Delivered.</h1>
-          <p class="hero-copy">
+          <p>
             Wentworth Hedge Fund is an independent investment firm focused on
             institutional discipline, long-term capital stewardship, and a
             research-driven approach to changing global markets.
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="pages/insights.html">Explore Insights</a>
-            <a class="btn btn-light" href="pages/our-firm.html">About the Firm</a>
+            <a href="./pages/insights.html" class="btn btn-primary">Explore Insights</a>
+            <a href="./pages/our-firm.html" class="btn btn-secondary">About the Firm</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FEATURED INSIGHTS -->
-    <section class="section">
+    <!-- FEATURED BRIEFS -->
+    <section class="section featured-section">
       <div class="container">
         <div class="section-heading">
           <h2>Featured macro and strategy briefs.</h2>
           <p>
-            Highlighted thematic briefs addressing policy, geopolitics, and
-            forward-looking views relevant to institutional investors and
-            strategic decision-makers.
+            Highlighted thematic briefs addressing policy, geopolitics, and forward-looking
+            views relevant to institutional investors and strategic decision-makers.
           </p>
         </div>
 
-        <div class="insights-grid">
-          <article class="insight-card">
-            <a class="insight-card__media" href="pages/bank-of-japan-rate-decision.html" aria-label="Bank of Japan Rate Decision">
+        <div class="brief-grid">
+          <article class="brief-card">
+            <a href="./pages/boj-rate-decision.html" class="brief-media" aria-label="Bank of Japan Rate Decision">
               <img
-                src="https://images.pexels.com/photos/33301672/pexels-photo-33301672.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=800"
-                alt="Modern financial district scene in Nihonbashi, Tokyo"
-                loading="lazy"
+                src="https://images.pexels.com/photos/33301672/pexels-photo-33301672.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=780&q=85"
+                alt="Japanese financial district architecture near Nihonbashi"
               />
             </a>
-            <div class="insight-card__body">
+
+            <div class="brief-body">
               <h3>Bank of Japan Rate Decision</h3>
               <p>
-                A policy-focused brief examining the Bank of Japan’s evolving
-                rate path, the implications for JGB yields, the yen, domestic
-                funding conditions, and broader asset allocation across Japanese markets.
+                Analysis of the BOJ’s policy path, yield curve dynamics, and implications
+                for global fixed income and currency markets.
               </p>
-              <a class="btn btn-primary btn-sm" href="pages/bank-of-japan-rate-decision.html">Read the brief</a>
+              <a href="./pages/boj-rate-decision.html" class="text-link">Read the brief <span>→</span></a>
             </div>
           </article>
 
-          <article class="insight-card">
-            <a class="insight-card__media" href="pages/us-iran-global-impact.html" aria-label="Global Economic Implications of a U.S.–Iran War Scenario">
+          <article class="brief-card">
+            <a href="./pages/us-iran-global-impact.html" class="brief-media" aria-label="Global Economic Implications of a U.S.–Iran War Scenario">
               <img
-                src="https://images.pexels.com/photos/4606157/pexels-photo-4606157.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=800"
-                alt="Aerial view of an oil tanker at sea"
-                loading="lazy"
+                src="https://images.pexels.com/photos/4606157/pexels-photo-4606157.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=780&q=85"
+                alt="Oil tanker sailing at sea"
               />
             </a>
-            <div class="insight-card__body">
+
+            <div class="brief-body">
               <h3>Global Economic Implications of a U.S.–Iran War Scenario</h3>
               <p>
-                A scenario framework assessing the potential transmission
-                channels from military escalation to oil markets, inflation,
-                shipping routes, global risk sentiment, and cross-border growth conditions.
+                Examining energy markets, shipping lanes, and macro spillovers under
+                escalating geopolitical risk in the Middle East.
               </p>
-              <a class="btn btn-primary btn-sm" href="pages/us-iran-global-impact.html">Read the brief</a>
+              <a href="./pages/us-iran-global-impact.html" class="text-link">Read the brief <span>→</span></a>
             </div>
           </article>
 
-          <article class="insight-card">
-            <a class="insight-card__media" href="pages/japan-2026-outlook.html" aria-label="Japan 2026 Economic Outlook">
+          <article class="brief-card">
+            <a href="./pages/japan-2026-outlook.html" class="brief-media" aria-label="Japan 2026 Economic Outlook">
               <img
-                src="https://images.pexels.com/photos/25118689/pexels-photo-25118689.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=800"
-                alt="Panoramic view of Mount Fuji and a Japanese cityscape"
-                loading="lazy"
+                src="https://images.pexels.com/photos/25118689/pexels-photo-25118689.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=780&q=85"
+                alt="Mount Fuji and Japanese cityscape"
               />
             </a>
-            <div class="insight-card__body">
+
+            <div class="brief-body">
               <h3>Japan 2026 Economic Outlook</h3>
               <p>
-                A forward-looking note on Japan’s macroeconomic outlook in 2026,
-                with emphasis on growth composition, wage dynamics, inflation
-                persistence, policy normalization, and opportunities across Japanese equities.
+                Forward-looking outlook on growth composition, inflation persistence,
+                policy normalization, and opportunities across Japanese equities.
               </p>
-              <a class="btn btn-primary btn-sm" href="pages/japan-2026-outlook.html">Read the brief</a>
+              <a href="./pages/japan-2026-outlook.html" class="text-link">Read the brief <span>→</span></a>
             </div>
           </article>
         </div>
@@ -129,124 +137,124 @@
     </section>
 
     <!-- BUSINESS OVERVIEW -->
-    <section class="section section-soft">
+    <section class="section business-section">
       <div class="container">
-        <div class="section-heading section-heading--row">
-          <div>
+        <div class="business-heading-row">
+          <div class="section-heading business-heading">
             <h2>Business overview.</h2>
             <p>
-              A broad capabilities platform spanning investment, advisory,
-              research, and globally oriented institutional services.
+              A broad capabilities platform spanning investment, advisory, research,
+              and globally oriented institutional services.
             </p>
           </div>
 
-          <div class="slider-controls" aria-label="Business overview slider controls">
-            <button class="slider-btn" type="button" data-slider-prev aria-label="Previous cards">←</button>
-            <button class="slider-btn" type="button" data-slider-next aria-label="Next cards">→</button>
+          <div class="business-controls" aria-label="Business overview controls">
+            <button class="business-arrow" type="button" id="businessPrev" aria-label="Previous business cards">←</button>
+            <button class="business-arrow" type="button" id="businessNext" aria-label="Next business cards">→</button>
           </div>
         </div>
 
-        <div class="business-slider">
-          <div class="business-track" data-slider-track>
+        <div class="business-carousel">
+          <div class="business-track" id="businessTrack">
             <article class="business-card">
-              <div class="business-card__media">
+              <div class="business-media">
                 <img
-                  src="https://images.pexels.com/photos/30234381/pexels-photo-30234381.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=900&h=700"
-                  alt="Office desk with laptop and notebook"
-                  loading="lazy"
+                  src="https://images.pexels.com/photos/30234381/pexels-photo-30234381.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=900&h=620&q=85"
+                  alt="Laptop and coffee on an investment desk"
                 />
               </div>
-              <div class="business-card__body">
+              <div class="business-body">
                 <h3>Asset Management</h3>
                 <p>
-                  Research-driven portfolio construction, risk budgeting, and
-                  long-term capital stewardship across public market opportunities.
+                  Research-driven portfolio construction, risk budgeting, and long-term
+                  capital stewardship across public market opportunities.
                 </p>
+                <a href="./pages/what-we-do.html" class="text-link">Learn more <span>→</span></a>
               </div>
             </article>
 
             <article class="business-card">
-              <div class="business-card__media">
+              <div class="business-media">
                 <img
-                  src="https://images.pexels.com/photos/9301872/pexels-photo-9301872.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=900&h=700"
-                  alt="Team collaborating with sticky notes"
-                  loading="lazy"
+                  src="https://images.pexels.com/photos/9301872/pexels-photo-9301872.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=900&h=620&q=85"
+                  alt="Strategy meeting with team members and notes"
                 />
               </div>
-              <div class="business-card__body">
+              <div class="business-body">
                 <h3>Financial Strategy Consulting</h3>
                 <p>
-                  Strategic advisory on financing conditions, balance sheet
-                  priorities, capital planning, and market-sensitive decision frameworks.
+                  Strategic advisory on financing conditions, balance sheet priorities,
+                  capital planning, and market-sensitive decision frameworks.
                 </p>
+                <a href="./pages/what-we-do.html" class="text-link">Learn more <span>→</span></a>
               </div>
             </article>
 
             <article class="business-card">
-              <div class="business-card__media">
+              <div class="business-media">
                 <img
-                  src="https://images.pexels.com/photos/7710054/pexels-photo-7710054.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=900&h=700"
-                  alt="Business meeting in a modern office"
-                  loading="lazy"
+                  src="https://images.pexels.com/photos/7710054/pexels-photo-7710054.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=900&h=620&q=85"
+                  alt="Market research meeting with laptops and documents"
                 />
               </div>
-              <div class="business-card__body">
+              <div class="business-body">
                 <h3>Market Research</h3>
                 <p>
-                  Structured macro, sector, and company-level analysis
-                  supporting investment judgment and institutional planning.
+                  Structured macro, sector, and company-level analysis supporting
+                  investment judgment and institutional planning.
                 </p>
+                <a href="./pages/what-we-do.html" class="text-link">Learn more <span>→</span></a>
               </div>
             </article>
 
             <article class="business-card">
-              <div class="business-card__media">
+              <div class="business-media">
                 <img
-                  src="https://images.pexels.com/photos/32008357/pexels-photo-32008357.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=900&h=700"
-                  alt="Torii gate in Japan"
-                  loading="lazy"
+                  src="https://images.pexels.com/photos/32008357/pexels-photo-32008357.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=900&h=620&q=85"
+                  alt="Japanese torii gate and waterfront"
                 />
               </div>
-              <div class="business-card__body">
+              <div class="business-body">
                 <h3>Japanese Equity Investment</h3>
                 <p>
-                  Dedicated focus on listed Japanese companies, valuation
-                  asymmetries, and policy-sensitive opportunities across the domestic market.
+                  Dedicated focus on listed Japanese companies, valuation asymmetries,
+                  and policy-sensitive opportunities across the domestic market.
                 </p>
+                <a href="./pages/what-we-do.html" class="text-link">Learn more <span>→</span></a>
               </div>
             </article>
 
             <article class="business-card">
-              <div class="business-card__media">
+              <div class="business-media">
                 <img
-                  src="https://images.pexels.com/photos/30630832/pexels-photo-30630832.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=900&h=700"
-                  alt="Cargo ship in port with containers"
-                  loading="lazy"
+                  src="https://images.pexels.com/photos/30630832/pexels-photo-30630832.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=900&h=620&q=85"
+                  alt="Container ship and port infrastructure"
                 />
               </div>
-              <div class="business-card__body">
+              <div class="business-body">
                 <h3>Global Trade</h3>
                 <p>
-                  Cross-border commercial perspective informed by logistics,
-                  policy shifts, commodity routes, and international market linkages.
+                  Cross-border commercial perspective informed by logistics, policy shifts,
+                  commodity routes, and international market linkages.
                 </p>
+                <a href="./pages/what-we-do.html" class="text-link">Learn more <span>→</span></a>
               </div>
             </article>
 
             <article class="business-card">
-              <div class="business-card__media">
+              <div class="business-media">
                 <img
-                  src="https://images.pexels.com/photos/1815396/pexels-photo-1815396.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=900&h=700"
+                  src="https://images.pexels.com/photos/1815396/pexels-photo-1815396.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=900&h=620&q=85"
                   alt="Airplane wing above clouds"
-                  loading="lazy"
                 />
               </div>
-              <div class="business-card__body">
+              <div class="business-body">
                 <h3>Institutional Travel</h3>
                 <p>
-                  Travel support and coordination aligned with executive
-                  schedules, investor meetings, and international business engagement.
+                  Travel support and coordination aligned with executive schedules,
+                  investor meetings, and international business engagement.
                 </p>
+                <a href="./pages/what-we-do.html" class="text-link">Learn more <span>→</span></a>
               </div>
             </article>
           </div>
@@ -255,62 +263,80 @@
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-grid">
-      <div class="footer-brand">
-        <a href="index.html" class="brand brand--footer">
-          <span>Wentworth</span>
-          <span>Hedge Fund</span>
+      <div class="footer-brand-block">
+        <a href="./index.html" class="brand-link footer-brand-link">
+          <span class="brand-line">Wentworth</span>
+          <span class="brand-line">Hedge Fund</span>
         </a>
+
         <p>
           Independent investment firm with a research-driven, globally informed,
           and institutionally disciplined approach.
         </p>
+
+        <p class="copyright">© 2026 Wentworth Hedge Fund. All rights reserved.</p>
       </div>
 
-      <div class="footer-col">
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="pages/what-we-do.html">What We Do</a></li>
-          <li><a href="pages/insights.html">Insights</a></li>
-          <li><a href="pages/market-intelligence.html">Market Intelligence</a></li>
-        </ul>
+      <div class="footer-column">
+        <h4>What We Do</h4>
+        <a href="./pages/what-we-do.html">Asset Management</a>
+        <a href="./pages/what-we-do.html">Financial Strategy Consulting</a>
+        <a href="./pages/what-we-do.html">Market Research</a>
+        <a href="./pages/what-we-do.html">Japanese Equity Investment</a>
+        <a href="./pages/what-we-do.html">Global Trade</a>
+        <a href="./pages/what-we-do.html">Institutional Travel</a>
       </div>
 
-      <div class="footer-col">
-        <h4>Firm</h4>
-        <ul>
-          <li><a href="pages/our-firm.html">Our Firm</a></li>
-          <li><a href="pages/careers.html">Careers</a></li>
-          <li><a href="pages/client-login.html">Client Login</a></li>
-        </ul>
+      <div class="footer-column">
+        <h4>Insights</h4>
+        <a href="./pages/insights.html">Macro Briefs</a>
+        <a href="./pages/insights.html">Market Updates</a>
+        <a href="./pages/insights.html">Research Publications</a>
+        <a href="./pages/insights.html">Webinars & Events</a>
       </div>
 
-      <div class="footer-col">
+      <div class="footer-column">
+        <h4>Our Firm</h4>
+        <a href="./pages/our-firm.html">About Us</a>
+        <a href="./pages/our-firm.html">Investment Philosophy</a>
+        <a href="./pages/our-firm.html">Team</a>
+        <a href="./pages/our-firm.html">Press & Media</a>
+      </div>
+
+      <div class="footer-column contact-column">
         <h4>Contact</h4>
-        <p><a href="mailto:wentworthhedgefund@outlook.com">wentworthhedgefund@outlook.com</a></p>
+        <p>
+          Wentworth Hedge Fund<br />
+          Tokyo, Japan<br />
+          <a href="mailto:wentworthhedgefund@outlook.com">wentworthhedgefund@outlook.com</a>
+        </p>
 
-        <div class="social-list" aria-label="Social links">
-          <a href="#" class="social-link" aria-label="X">
+        <div class="social-links" aria-label="Social links">
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X">
             <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M18.9 2H22l-6.77 7.74L23 22h-6.09l-4.77-6.24L6.68 22H3.57l7.23-8.27L1 2h6.24l4.31 5.68L18.9 2Zm-1.07 18h1.69L6.33 3.89H4.51Z"/>
+              <path d="M18.9 2H22l-6.77 7.74L23 22h-6.17l-4.83-6.31L6.48 22H3.37l7.23-8.27L1 2h6.33l4.37 5.76L18.9 2Zm-1.08 18h1.71L6.4 3.9H4.57Z" />
             </svg>
           </a>
 
-          <a href="#" class="social-link" aria-label="Instagram">
+          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3Zm5 3.75A5.25 5.25 0 1 1 6.75 13 5.26 5.26 0 0 1 12 7.75Zm0 2A3.25 3.25 0 1 0 15.25 13 3.25 3.25 0 0 0 12 9.75Zm5.5-3.25a1.25 1.25 0 1 1-1.25 1.25 1.25 1.25 0 0 1 1.25-1.25Z"/>
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2Zm10.35 1.45a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2.2A2.8 2.8 0 1 0 12 14.8 2.8 2.8 0 0 0 12 9.2Z" />
             </svg>
           </a>
 
-          <a href="#" class="social-link" aria-label="Facebook">
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
             <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M13.5 22v-8h2.7l.4-3h-3.1V9.1c0-.9.3-1.6 1.6-1.6h1.7V4.8c-.3 0-1.4-.1-2.6-.1-2.6 0-4.3 1.6-4.3 4.5V11H7v3h2.9v8Z"/>
+              <path d="M13.5 22v-8.1h2.74l.41-3.17H13.5V8.7c0-.92.26-1.54 1.57-1.54h1.67V4.32c-.29-.04-1.28-.12-2.43-.12-2.4 0-4.05 1.47-4.05 4.16v2.36H7.5v3.17h2.76V22h3.24Z" />
             </svg>
           </a>
         </div>
       </div>
     </div>
   </footer>
+
+  <script src="./js/main.js"></script>
 </body>
 </html>
