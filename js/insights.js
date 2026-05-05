@@ -1,3 +1,16 @@
+const INSIGHT_FALLBACK_IMAGE =
+  "https://images.pexels.com/photos/33165659/pexels-photo-33165659.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1400&h=900&q=85";
+
+function imageWithFallback(src, alt) {
+  return `
+    <img
+      src="${src}"
+      alt="${alt}"
+      onerror="this.onerror=null;this.src='${INSIGHT_FALLBACK_IMAGE}';"
+    />
+  `;
+}
+
 function buildInsightLink(slug) {
   return `./insight-detail.html?slug=${encodeURIComponent(slug)}`;
 }
@@ -16,8 +29,9 @@ function renderInsightsLanding() {
   featuredMount.innerHTML = `
     <article class="featured-insight-card">
       <a class="featured-insight-image" href="${buildInsightLink(featured.slug)}" aria-label="${featured.title}">
-        <img src="${featured.image}" alt="${featured.alt}" />
+        ${imageWithFallback(featured.image, featured.alt)}
       </a>
+
       <div class="featured-insight-body">
         <p class="insight-meta">${featured.category} <span>•</span> ${featured.date}</p>
         <h2>
@@ -34,11 +48,14 @@ function renderInsightsLanding() {
       (item) => `
       <article class="latest-insight-item">
         <a class="latest-insight-thumb" href="${buildInsightLink(item.slug)}" aria-label="${item.title}">
-          <img src="${item.image}" alt="${item.alt}" />
+          ${imageWithFallback(item.image, item.alt)}
         </a>
+
         <div class="latest-insight-body">
           <p class="insight-meta">${item.category}</p>
-          <h3><a href="${buildInsightLink(item.slug)}">${item.title}</a></h3>
+          <h3>
+            <a href="${buildInsightLink(item.slug)}">${item.title}</a>
+          </h3>
           <p>${item.summary}</p>
           <p class="latest-date">${item.date}</p>
         </div>
@@ -52,11 +69,14 @@ function renderInsightsLanding() {
       (item) => `
       <article class="insight-grid-card">
         <a class="insight-grid-image" href="${buildInsightLink(item.slug)}" aria-label="${item.title}">
-          <img src="${item.image}" alt="${item.alt}" />
+          ${imageWithFallback(item.image, item.alt)}
         </a>
+
         <div class="insight-grid-body">
           <p class="insight-meta">${item.category} <span>•</span> ${item.date}</p>
-          <h3><a href="${buildInsightLink(item.slug)}">${item.title}</a></h3>
+          <h3>
+            <a href="${buildInsightLink(item.slug)}">${item.title}</a>
+          </h3>
           <p>${item.summary}</p>
           <a href="${buildInsightLink(item.slug)}" class="text-link">Read the brief <span>→</span></a>
         </div>
@@ -98,7 +118,7 @@ function renderInsightDetail() {
       </div>
 
       <div class="insight-detail-hero">
-        <img src="${article.image}" alt="${article.alt}" />
+        ${imageWithFallback(article.image, article.alt)}
       </div>
 
       <div class="insight-detail-body">
@@ -130,6 +150,7 @@ function bindSubscribeForm() {
 
   subscribeForm.addEventListener("submit", (event) => {
     event.preventDefault();
+
     const emailInput = subscribeForm.querySelector('input[type="email"]');
     const value = emailInput.value.trim();
 
