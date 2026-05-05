@@ -65,7 +65,6 @@ function updateBusinessCarousel() {
   const firstSlide = slides[0];
   if (!firstSlide) return;
 
-  const slideStyle = window.getComputedStyle(firstSlide);
   const trackStyle = window.getComputedStyle(businessTrack);
   const gap = parseFloat(trackStyle.columnGap || trackStyle.gap || 24);
   const slideWidth = firstSlide.getBoundingClientRect().width + gap;
