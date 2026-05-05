@@ -6,14 +6,13 @@
   <title>Wentworth Hedge Fund</title>
   <meta
     name="description"
-    content="Wentworth Hedge Fund is a research-driven investment firm with a global market perspective and disciplined institutional approach."
+    content="Wentworth Hedge Fund is an independent investment firm with a research-driven approach, institutional discipline, and a global market perspective."
   />
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   />
 
@@ -23,14 +22,11 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="./index.html" class="brand-link" aria-label="Wentworth Hedge Fund home">
-        <img
-          src="./images/wentworth-logo.png"
-          alt="Wentworth Hedge Fund"
-          class="brand-logo"
-        />
+        <span class="brand-line-1">Wentworth</span>
+        <span class="brand-line-2">Hedge Fund</span>
       </a>
 
-      <button class="menu-toggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
+      <button class="menu-toggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open navigation">
         <span></span>
         <span></span>
         <span></span>
@@ -50,20 +46,132 @@
   </header>
 
   <main>
-    <section class="hero hero-home">
-      <div class="hero-overlay"></div>
-      <div class="container hero-content-wrap">
+    <!-- Hero -->
+    <section class="hero-home">
+      <div class="hero-scene" aria-hidden="true">
+        <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" role="presentation">
+          <defs>
+            <linearGradient id="skyGradient" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#edf5fc"/>
+              <stop offset="55%" stop-color="#d9e8f6"/>
+              <stop offset="100%" stop-color="#c8ddef"/>
+            </linearGradient>
+
+            <linearGradient id="glassGradient" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#9dc1e0" stop-opacity="0.48"/>
+              <stop offset="100%" stop-color="#7da6ce" stop-opacity="0.18"/>
+            </linearGradient>
+
+            <linearGradient id="towerGradient" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#2f5a8f"/>
+              <stop offset="100%" stop-color="#173b67"/>
+            </linearGradient>
+
+            <filter id="softBlur">
+              <feGaussianBlur stdDeviation="10"/>
+            </filter>
+          </defs>
+
+          <rect width="1600" height="900" fill="url(#skyGradient)"/>
+
+          <!-- soft light -->
+          <circle cx="1210" cy="175" r="115" fill="#ffffff" opacity="0.42" filter="url(#softBlur)"/>
+          <circle cx="300" cy="170" r="180" fill="#ffffff" opacity="0.16" filter="url(#softBlur)"/>
+
+          <!-- subtle finance grid -->
+          <g opacity="0.18" stroke="#234978" stroke-width="1">
+            <line x1="0" y1="700" x2="1600" y2="700"/>
+            <line x1="0" y1="620" x2="1600" y2="620"/>
+            <line x1="0" y1="540" x2="1600" y2="540"/>
+            <line x1="0" y1="460" x2="1600" y2="460"/>
+            <line x1="1240" y1="250" x2="1240" y2="760"/>
+            <line x1="1340" y1="230" x2="1340" y2="760"/>
+            <line x1="1440" y1="210" x2="1440" y2="760"/>
+          </g>
+
+          <!-- distant buildings -->
+          <g opacity="0.42">
+            <rect x="860" y="340" width="90" height="360" rx="3" fill="#8fb4d5"/>
+            <rect x="940" y="280" width="82" height="420" rx="3" fill="#84abd0"/>
+            <rect x="1015" y="370" width="100" height="330" rx="3" fill="#97bbda"/>
+            <rect x="1100" y="250" width="140" height="450" rx="3" fill="#89afd1"/>
+            <rect x="1230" y="310" width="112" height="390" rx="3" fill="#93b8d8"/>
+            <rect x="1320" y="360" width="160" height="340" rx="3" fill="#8aaed0"/>
+            <rect x="1450" y="290" width="80" height="410" rx="3" fill="#9dc1e0"/>
+          </g>
+
+          <!-- main skyline -->
+          <g>
+            <rect x="760" y="410" width="120" height="310" fill="#204774" opacity="0.86"/>
+            <rect x="860" y="320" width="130" height="400" fill="#173c67" opacity="0.92"/>
+            <rect x="980" y="250" width="140" height="470" fill="#214d7c" opacity="0.95"/>
+            <rect x="1105" y="355" width="95" height="365" fill="#183f6b" opacity="0.92"/>
+            <rect x="1188" y="285" width="115" height="435" fill="#214d7c" opacity="0.95"/>
+            <rect x="1288" y="390" width="92" height="330" fill="#173c67" opacity="0.9"/>
+            <rect x="1360" y="340" width="138" height="380" fill="#204774" opacity="0.94"/>
+          </g>
+
+          <!-- tokyo tower inspired -->
+          <g transform="translate(905,180)">
+            <polygon points="65,0 88,0 123,530 30,530" fill="url(#towerGradient)" opacity="0.94"/>
+            <rect x="8" y="165" width="145" height="16" rx="8" fill="#234978" opacity="0.9"/>
+            <rect x="0" y="280" width="162" height="18" rx="9" fill="#234978" opacity="0.9"/>
+            <rect x="20" y="410" width="120" height="18" rx="9" fill="#234978" opacity="0.9"/>
+            <rect x="57" y="0" width="38" height="58" rx="18" fill="#2a5789"/>
+            <rect x="66" y="44" width="20" height="72" rx="10" fill="#163965"/>
+          </g>
+
+          <!-- windows -->
+          <g fill="#ffffff" opacity="0.28">
+            <g transform="translate(780,440)">
+              <rect x="0" y="0" width="10" height="10"/><rect x="24" y="0" width="10" height="10"/><rect x="48" y="0" width="10" height="10"/>
+              <rect x="0" y="30" width="10" height="10"/><rect x="24" y="30" width="10" height="10"/><rect x="48" y="30" width="10" height="10"/>
+              <rect x="0" y="60" width="10" height="10"/><rect x="24" y="60" width="10" height="10"/><rect x="48" y="60" width="10" height="10"/>
+            </g>
+            <g transform="translate(1005,290)">
+              <rect x="0" y="0" width="10" height="10"/><rect x="24" y="0" width="10" height="10"/><rect x="48" y="0" width="10" height="10"/><rect x="72" y="0" width="10" height="10"/>
+              <rect x="0" y="32" width="10" height="10"/><rect x="24" y="32" width="10" height="10"/><rect x="48" y="32" width="10" height="10"/><rect x="72" y="32" width="10" height="10"/>
+              <rect x="0" y="64" width="10" height="10"/><rect x="24" y="64" width="10" height="10"/><rect x="48" y="64" width="10" height="10"/><rect x="72" y="64" width="10" height="10"/>
+            </g>
+            <g transform="translate(1215,320)">
+              <rect x="0" y="0" width="10" height="10"/><rect x="24" y="0" width="10" height="10"/><rect x="48" y="0" width="10" height="10"/>
+              <rect x="0" y="30" width="10" height="10"/><rect x="24" y="30" width="10" height="10"/><rect x="48" y="30" width="10" height="10"/>
+              <rect x="0" y="60" width="10" height="10"/><rect x="24" y="60" width="10" height="10"/><rect x="48" y="60" width="10" height="10"/>
+            </g>
+          </g>
+
+          <!-- market line -->
+          <g fill="none" stroke="#244b79" stroke-width="5" opacity="0.42" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M760 620 L860 585 L930 600 L1000 520 L1080 540 L1180 470 L1300 495 L1420 430 L1535 450"/>
+          </g>
+          <g fill="#244b79" opacity="0.52">
+            <circle cx="760" cy="620" r="6"/>
+            <circle cx="860" cy="585" r="6"/>
+            <circle cx="930" cy="600" r="6"/>
+            <circle cx="1000" cy="520" r="6"/>
+            <circle cx="1080" cy="540" r="6"/>
+            <circle cx="1180" cy="470" r="6"/>
+            <circle cx="1300" cy="495" r="6"/>
+            <circle cx="1420" cy="430" r="6"/>
+            <circle cx="1535" cy="450" r="6"/>
+          </g>
+
+          <!-- foreground base -->
+          <rect x="0" y="710" width="1600" height="190" fill="#bdd6ea" opacity="0.74"/>
+          <rect x="0" y="748" width="1600" height="152" fill="#aac9e3" opacity="0.52"/>
+        </svg>
+      </div>
+
+      <div class="container hero-inner">
         <div class="hero-copy">
-          <p class="eyebrow">Wentworth Hedge Fund</p>
           <h1 class="hero-title">
             A global market perspective shaped by disciplined research.
           </h1>
           <p class="hero-description">
-            Wentworth Hedge Fund is an independent investment firm focused on
-            institutional discipline, long-term capital stewardship, and a research-driven
-            approach to changing global markets.
+            Wentworth Hedge Fund is an independent investment firm focused on institutional
+            discipline, long-term capital stewardship, and a research-driven approach to
+            changing global markets.
           </p>
-
           <div class="hero-actions">
             <a href="./pages/insights.html" class="btn btn-primary">Explore Insights</a>
             <a href="./pages/our-firm.html" class="btn btn-secondary">About the Firm</a>
@@ -72,81 +180,220 @@
       </div>
     </section>
 
+    <!-- Featured macro / research cards -->
     <section class="section section-soft">
       <div class="container">
-        <div class="section-header">
-          <p class="section-kicker">Stay Informed</p>
-          <h2 class="section-title">A cleaner institutional presentation.</h2>
+        <div class="section-head">
+          <h2 class="section-title">Featured macro and strategy briefs.</h2>
           <p class="section-description">
-            We have restructured the site so each navigation item opens its own page,
-            while the home page stays focused on brand, positioning, and selected highlights.
+            Highlighted thematic briefs addressing policy, geopolitics, and forward-looking
+            views relevant to institutional investors and strategic decision-makers.
           </p>
         </div>
 
-        <div class="content-grid three-up">
-          <article class="content-card">
-            <p class="card-label">What We Do</p>
-            <h3>Investment and market capabilities</h3>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>Bank of Japan Rate Decision</h3>
             <p>
-              Review our platform across asset management, Japanese equities,
-              quantitative strategies, capital markets, financing, and global operations.
+              A policy-focused brief examining the Bank of Japan’s evolving rate path,
+              the implications for JGB yields, the yen, domestic funding conditions,
+              and broader asset allocation across Japanese markets.
             </p>
-            <a href="./pages/what-we-do.html" class="text-link">Open page</a>
+            <a href="./pages/boj-rate-decision.html" class="card-button">Read the brief</a>
           </article>
 
-          <article class="content-card">
-            <p class="card-label">Insights</p>
-            <h3>Research perspectives and market commentary</h3>
+          <article class="feature-card">
+            <h3>Global Economic Implications of a U.S.–Iran War Scenario</h3>
             <p>
-              Explore macroeconomics, geopolitics & trade, digital assets & AI,
-              and market commentary in a cleaner editorial layout.
+              A scenario framework assessing the potential transmission channels from
+              military escalation to oil markets, inflation, shipping routes, global
+              risk sentiment, and cross-border growth conditions.
             </p>
-            <a href="./pages/insights.html" class="text-link">Open page</a>
+            <a href="./pages/us-iran-global-impact.html" class="card-button">Read the brief</a>
           </article>
 
-          <article class="content-card">
-            <p class="card-label">Our Firm</p>
-            <h3>Rigor, discipline, and long-term orientation</h3>
+          <article class="feature-card">
+            <h3>Japan 2026 Economic Outlook</h3>
             <p>
-              Learn more about our mission, firm culture, risk management framework,
-              and global perspective.
+              A forward-looking note on Japan’s macroeconomic outlook in 2026, with
+              emphasis on growth composition, wage dynamics, inflation persistence,
+              policy normalization, and opportunities across Japanese equities.
             </p>
-            <a href="./pages/our-firm.html" class="text-link">Open page</a>
+            <a href="./pages/japan-2026-outlook.html" class="card-button">Read the brief</a>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- Business slider -->
     <section class="section section-light">
       <div class="container">
-        <div class="section-header">
-          <p class="section-kicker">Firm Snapshot</p>
-          <h2 class="section-title">A more refined visual direction.</h2>
+        <div class="section-head section-head-split">
+          <div>
+            <h2 class="section-title">Business overview.</h2>
+            <p class="section-description">
+              A broad capabilities platform spanning investment, advisory, research,
+              and globally oriented institutional services.
+            </p>
+          </div>
+
+          <div class="carousel-controls" aria-label="Business slider controls">
+            <button class="carousel-arrow" id="businessPrev" aria-label="Previous business card">
+              <span>←</span>
+            </button>
+            <button class="carousel-arrow" id="businessNext" aria-label="Next business card">
+              <span>→</span>
+            </button>
+          </div>
         </div>
 
-        <div class="content-grid three-up">
-          <article class="simple-card">
-            <h3>Research-Driven</h3>
-            <p>
-              Our process emphasizes structured analysis, measured judgment,
-              and a global market lens.
-            </p>
-          </article>
+        <div class="business-carousel">
+          <div class="business-track" id="businessTrack">
+            <!-- 1 Asset Management -->
+            <article class="business-card">
+              <div class="business-art">
+                <svg viewBox="0 0 600 360" role="presentation">
+                  <defs>
+                    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0%" stop-color="#eaf3fb"/>
+                      <stop offset="100%" stop-color="#cadff0"/>
+                    </linearGradient>
+                  </defs>
+                  <rect width="600" height="360" rx="28" fill="url(#g1)"/>
+                  <rect x="78" y="220" width="72" height="78" rx="10" fill="#94b8d8"/>
+                  <rect x="182" y="182" width="72" height="116" rx="10" fill="#6d97c2"/>
+                  <rect x="286" y="132" width="72" height="166" rx="10" fill="#3d6998"/>
+                  <rect x="390" y="90" width="72" height="208" rx="10" fill="#214d7c"/>
+                  <path d="M95 205 C165 168, 210 186, 286 142 C330 118, 372 112, 430 80" fill="none" stroke="#173b67" stroke-width="8" stroke-linecap="round"/>
+                  <circle cx="430" cy="80" r="10" fill="#173b67"/>
+                  <circle cx="286" cy="142" r="10" fill="#173b67"/>
+                </svg>
+              </div>
+              <div class="business-body">
+                <h3>Asset Management</h3>
+                <p>
+                  Research-driven portfolio construction, risk budgeting, and long-term
+                  capital stewardship across public market opportunities.
+                </p>
+              </div>
+            </article>
 
-          <article class="simple-card">
-            <h3>Institutional Mindset</h3>
-            <p>
-              We focus on risk discipline, capital stewardship, and professional communication.
-            </p>
-          </article>
+            <!-- 2 Financial Strategy Consulting -->
+            <article class="business-card">
+              <div class="business-art">
+                <svg viewBox="0 0 600 360" role="presentation">
+                  <rect width="600" height="360" rx="28" fill="#deebf7"/>
+                  <rect x="90" y="88" width="420" height="220" rx="22" fill="#f8fbff" stroke="#adc8df" stroke-width="4"/>
+                  <path d="M140 230 L230 185 L305 210 L380 150 L455 110" fill="none" stroke="#1c456f" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="140" cy="230" r="8" fill="#1c456f"/>
+                  <circle cx="230" cy="185" r="8" fill="#1c456f"/>
+                  <circle cx="305" cy="210" r="8" fill="#1c456f"/>
+                  <circle cx="380" cy="150" r="8" fill="#1c456f"/>
+                  <circle cx="455" cy="110" r="8" fill="#1c456f"/>
+                  <rect x="146" y="116" width="110" height="18" rx="9" fill="#7fa8cf"/>
+                  <rect x="146" y="148" width="160" height="14" rx="7" fill="#c2d8ea"/>
+                </svg>
+              </div>
+              <div class="business-body">
+                <h3>Financial Strategy Consulting</h3>
+                <p>
+                  Strategic advisory on financing conditions, balance sheet priorities,
+                  capital planning, and market-sensitive decision frameworks.
+                </p>
+              </div>
+            </article>
 
-          <article class="simple-card">
-            <h3>Long-Term Orientation</h3>
-            <p>
-              We believe durable relationships are built through consistency,
-              clarity, and a disciplined investment process.
-            </p>
-          </article>
+            <!-- 3 Market Research -->
+            <article class="business-card">
+              <div class="business-art">
+                <svg viewBox="0 0 600 360" role="presentation">
+                  <rect width="600" height="360" rx="28" fill="#deebf7"/>
+                  <rect x="104" y="76" width="190" height="220" rx="18" fill="#f8fbff" stroke="#b9d3e7" stroke-width="4"/>
+                  <rect x="320" y="110" width="170" height="186" rx="18" fill="#f8fbff" stroke="#b9d3e7" stroke-width="4"/>
+                  <rect x="140" y="118" width="120" height="16" rx="8" fill="#7da6ce"/>
+                  <rect x="140" y="152" width="96" height="12" rx="6" fill="#c4d9ea"/>
+                  <rect x="140" y="178" width="120" height="12" rx="6" fill="#c4d9ea"/>
+                  <rect x="140" y="204" width="88" height="12" rx="6" fill="#c4d9ea"/>
+                  <circle cx="405" cy="174" r="54" fill="none" stroke="#214d7c" stroke-width="12"/>
+                  <line x1="442" y1="211" x2="478" y2="247" stroke="#214d7c" stroke-width="12" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="business-body">
+                <h3>Market Research</h3>
+                <p>
+                  Structured macro, sector, and company-level analysis supporting
+                  investment judgment and institutional planning.
+                </p>
+              </div>
+            </article>
+
+            <!-- 4 Japanese Equities -->
+            <article class="business-card">
+              <div class="business-art">
+                <svg viewBox="0 0 600 360" role="presentation">
+                  <rect width="600" height="360" rx="28" fill="#deebf7"/>
+                  <rect x="92" y="82" width="416" height="210" rx="22" fill="#f8fbff" stroke="#b3cee4" stroke-width="4"/>
+                  <circle cx="180" cy="190" r="48" fill="#ffffff" stroke="#bfd7ea" stroke-width="4"/>
+                  <circle cx="180" cy="190" r="18" fill="#d35656"/>
+                  <path d="M280 214 L328 182 L374 195 L426 148 L470 126" fill="none" stroke="#173b67" stroke-width="8" stroke-linecap="round"/>
+                  <circle cx="470" cy="126" r="9" fill="#173b67"/>
+                  <rect x="280" y="100" width="148" height="14" rx="7" fill="#88add0"/>
+                </svg>
+              </div>
+              <div class="business-body">
+                <h3>Japanese Equity Investment</h3>
+                <p>
+                  Dedicated focus on listed Japanese companies, valuation asymmetries,
+                  and policy-sensitive opportunities across the domestic market.
+                </p>
+              </div>
+            </article>
+
+            <!-- 5 Global Trade -->
+            <article class="business-card">
+              <div class="business-art">
+                <svg viewBox="0 0 600 360" role="presentation">
+                  <rect width="600" height="360" rx="28" fill="#deebf7"/>
+                  <circle cx="208" cy="176" r="86" fill="#f8fbff" stroke="#b8d3e8" stroke-width="5"/>
+                  <ellipse cx="208" cy="176" rx="86" ry="30" fill="none" stroke="#7da6ce" stroke-width="4"/>
+                  <ellipse cx="208" cy="176" rx="42" ry="86" fill="none" stroke="#7da6ce" stroke-width="4"/>
+                  <line x1="122" y1="176" x2="294" y2="176" stroke="#7da6ce" stroke-width="4"/>
+                  <line x1="208" y1="90" x2="208" y2="262" stroke="#7da6ce" stroke-width="4"/>
+                  <path d="M350 225 C400 150, 434 135, 500 180" fill="none" stroke="#1c456f" stroke-width="8" stroke-linecap="round"/>
+                  <polygon points="495,166 522,184 490,193" fill="#1c456f"/>
+                  <rect x="338" y="108" width="120" height="14" rx="7" fill="#7ea6ce"/>
+                </svg>
+              </div>
+              <div class="business-body">
+                <h3>Global Trade</h3>
+                <p>
+                  Cross-border commercial perspective informed by logistics, policy shifts,
+                  commodity routes, and international market linkages.
+                </p>
+              </div>
+            </article>
+
+            <!-- 6 Institutional Travel -->
+            <article class="business-card">
+              <div class="business-art">
+                <svg viewBox="0 0 600 360" role="presentation">
+                  <rect width="600" height="360" rx="28" fill="#deebf7"/>
+                  <path d="M130 236 L302 192 L448 114 L472 136 L350 220 L392 252 L366 265 L294 236 L230 278 L198 270 L232 224 L130 256 Z" fill="#214d7c"/>
+                  <circle cx="160" cy="112" r="30" fill="#ffffff" stroke="#bcd7ea" stroke-width="4"/>
+                  <path d="M150 112 L170 112 M160 102 L160 122" stroke="#7fa8cf" stroke-width="4" stroke-linecap="round"/>
+                  <rect x="358" y="224" width="112" height="56" rx="12" fill="#f8fbff" stroke="#b6d0e5" stroke-width="4"/>
+                  <rect x="380" y="240" width="68" height="10" rx="5" fill="#7fa8cf"/>
+                </svg>
+              </div>
+              <div class="business-body">
+                <h3>Institutional Travel</h3>
+                <p>
+                  Travel support and coordination aligned with executive schedules,
+                  investor meetings, and international business engagement.
+                </p>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -155,11 +402,10 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand-block">
-        <img
-          src="./images/wentworth-logo.png"
-          alt="Wentworth Hedge Fund"
-          class="footer-logo"
-        />
+        <a href="./index.html" class="brand-link footer-brand-link">
+          <span class="brand-line-1">Wentworth</span>
+          <span class="brand-line-2">Hedge Fund</span>
+        </a>
         <p class="footer-text">
           Independent investment firm with a research-driven, globally informed,
           and institutionally disciplined approach.
