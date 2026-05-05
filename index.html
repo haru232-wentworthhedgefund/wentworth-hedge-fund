@@ -6,19 +6,31 @@
   <title>Wentworth Hedge Fund</title>
   <meta
     name="description"
-    content="Wentworth Hedge Fund is a research-driven investment firm focused on disciplined capital stewardship, market intelligence, and institutional risk management."
+    content="Wentworth Hedge Fund is a research-driven investment firm with a global market perspective and disciplined institutional approach."
   />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
   <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body class="home-page">
   <header class="site-header">
     <div class="container header-inner">
-      <a href="./index.html" class="site-brand" aria-label="Wentworth Hedge Fund home">
-        <span class="brand-main">Wentworth</span>
-        <span class="brand-sub">Hedge Fund</span>
+      <a href="./index.html" class="brand-link" aria-label="Wentworth Hedge Fund home">
+        <img
+          src="./images/wentworth-logo.png"
+          alt="Wentworth Hedge Fund"
+          class="brand-logo"
+        />
       </a>
 
-      <button class="menu-toggle" aria-expanded="false" aria-controls="navMenu">
+      <button class="menu-toggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
         <span></span>
         <span></span>
         <span></span>
@@ -31,116 +43,108 @@
           <li><a href="./pages/market-intelligence.html" class="nav-link">Market Intelligence</a></li>
           <li><a href="./pages/our-firm.html" class="nav-link">Our Firm</a></li>
           <li><a href="./pages/careers.html" class="nav-link">Careers</a></li>
-          <li><a href="./pages/client-login.html" class="nav-link nav-link-button">Client Login</a></li>
+          <li><a href="./pages/client-login.html" class="nav-link nav-pill">Client Login</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero-home">
+    <section class="hero hero-home">
       <div class="hero-overlay"></div>
-      <div class="container hero-grid">
-        <div class="hero-content">
+      <div class="container hero-content-wrap">
+        <div class="hero-copy">
           <p class="eyebrow">Wentworth Hedge Fund</p>
           <h1 class="hero-title">
-            Navigating global markets with disciplined capital stewardship.
+            A global market perspective shaped by disciplined research.
           </h1>
-          <p class="hero-text">
-            Wentworth Hedge Fund is an independent investment firm focused on research-driven
-            strategies, institutional risk management, and long-term partnership with clients.
+          <p class="hero-description">
+            Wentworth Hedge Fund is an independent investment firm focused on
+            institutional discipline, long-term capital stewardship, and a research-driven
+            approach to changing global markets.
           </p>
+
           <div class="hero-actions">
-            <a href="./pages/insights.html" class="btn btn-light">Explore Insights</a>
-            <a href="./pages/our-firm.html" class="btn btn-outline-light">About the Firm</a>
-          </div>
-        </div>
-
-        <div class="hero-panel">
-          <div class="hero-panel-item">
-            <span class="hero-panel-label">Global Perspective</span>
-            <p>Cross-asset thinking informed by macroeconomic, geopolitical, and market structure analysis.</p>
-          </div>
-          <div class="hero-panel-item">
-            <span class="hero-panel-label">Risk Discipline</span>
-            <p>Institutional frameworks for exposure management, liquidity awareness, and scenario review.</p>
-          </div>
-          <div class="hero-panel-item">
-            <span class="hero-panel-label">Long-Term Partnership</span>
-            <p>A measured, research-led approach to capital stewardship across changing market cycles.</p>
+            <a href="./pages/insights.html" class="btn btn-primary">Explore Insights</a>
+            <a href="./pages/our-firm.html" class="btn btn-secondary">About the Firm</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section light-section">
+    <section class="section section-soft">
       <div class="container">
         <div class="section-header">
-          <p class="section-kicker">Featured</p>
-          <h2 class="section-title">A focused institutional platform.</h2>
+          <p class="section-kicker">Stay Informed</p>
+          <h2 class="section-title">A cleaner institutional presentation.</h2>
           <p class="section-description">
-            Explore our capabilities, market commentary, and firm overview through dedicated pages.
+            We have restructured the site so each navigation item opens its own page,
+            while the home page stays focused on brand, positioning, and selected highlights.
           </p>
         </div>
 
-        <div class="feature-grid">
-          <article class="feature-card feature-card-large">
-            <p class="card-kicker">Insights</p>
-            <h3>Market views, macro commentary, and research perspectives.</h3>
+        <div class="content-grid three-up">
+          <article class="content-card">
+            <p class="card-label">What We Do</p>
+            <h3>Investment and market capabilities</h3>
             <p>
-              Access thought leadership across macroeconomics, geopolitics, digital assets,
-              AI, and broader market developments.
+              Review our platform across asset management, Japanese equities,
+              quantitative strategies, capital markets, financing, and global operations.
             </p>
-            <a href="./pages/insights.html" class="text-link">Explore Insights</a>
+            <a href="./pages/what-we-do.html" class="text-link">Open page</a>
           </article>
 
-          <article class="feature-card">
-            <p class="card-kicker">What We Do</p>
-            <h3>Integrated capabilities across asset management and capital markets.</h3>
+          <article class="content-card">
+            <p class="card-label">Insights</p>
+            <h3>Research perspectives and market commentary</h3>
             <p>
-              Learn more about our platform across investment strategies, financing,
-              underwriting, operations, and institutional services.
+              Explore macroeconomics, geopolitics & trade, digital assets & AI,
+              and market commentary in a cleaner editorial layout.
             </p>
-            <a href="./pages/what-we-do.html" class="text-link">View Capabilities</a>
+            <a href="./pages/insights.html" class="text-link">Open page</a>
           </article>
 
-          <article class="feature-card">
-            <p class="card-kicker">Market Intelligence</p>
-            <h3>Structured market information and dashboard-style coverage.</h3>
+          <article class="content-card">
+            <p class="card-label">Our Firm</p>
+            <h3>Rigor, discipline, and long-term orientation</h3>
             <p>
-              Review sample indicators, cross-asset positioning ideas, economic calendars,
-              and market snapshots in a clean institutional layout.
+              Learn more about our mission, firm culture, risk management framework,
+              and global perspective.
             </p>
-            <a href="./pages/market-intelligence.html" class="text-link">Open Market Intelligence</a>
+            <a href="./pages/our-firm.html" class="text-link">Open page</a>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section white-section">
+    <section class="section section-light">
       <div class="container">
         <div class="section-header">
-          <p class="section-kicker">Our Firm</p>
-          <h2 class="section-title">Built around rigor, perspective, and responsible execution.</h2>
+          <p class="section-kicker">Firm Snapshot</p>
+          <h2 class="section-title">A more refined visual direction.</h2>
         </div>
 
-        <div class="three-column-grid">
+        <div class="content-grid three-up">
           <article class="simple-card">
             <h3>Research-Driven</h3>
             <p>
-              Our process emphasizes structured analysis, careful review, and a global market lens.
+              Our process emphasizes structured analysis, measured judgment,
+              and a global market lens.
             </p>
           </article>
+
           <article class="simple-card">
             <h3>Institutional Mindset</h3>
             <p>
               We focus on risk discipline, capital stewardship, and professional communication.
             </p>
           </article>
+
           <article class="simple-card">
             <h3>Long-Term Orientation</h3>
             <p>
-              We believe durable relationships are built through consistency, clarity, and measured judgment.
+              We believe durable relationships are built through consistency,
+              clarity, and a disciplined investment process.
             </p>
           </article>
         </div>
@@ -150,11 +154,15 @@
 
   <footer class="site-footer">
     <div class="container footer-grid">
-      <div class="footer-brand-column">
-        <a href="./index.html" class="footer-brand">Wentworth Hedge Fund</a>
-        <p class="footer-note">
-          Independent investment firm with a research-driven, globally informed, and
-          institutionally disciplined approach.
+      <div class="footer-brand-block">
+        <img
+          src="./images/wentworth-logo.png"
+          alt="Wentworth Hedge Fund"
+          class="footer-logo"
+        />
+        <p class="footer-text">
+          Independent investment firm with a research-driven, globally informed,
+          and institutionally disciplined approach.
         </p>
       </div>
 
@@ -179,8 +187,7 @@
       <div class="footer-column">
         <h4>Contact</h4>
         <ul>
-          <li><a href="mailto:info@wentworthhedgefund.com">info@wentworthhedgefund.com</a></li>
-          <li><a href="mailto:careers@wentworthhedgefund.com">careers@wentworthhedgefund.com</a></li>
+          <li><a href="mailto:wentworthhedgefund@outlook.com">wentworthhedgefund@outlook.com</a></li>
         </ul>
       </div>
     </div>
