@@ -1730,3 +1730,160 @@ button {
     flex-direction: column;
   }
 }
+
+
+/* =========================================
+   MULTI-LOCATION SECTION
+========================================= */
+
+.firm-location-section {
+  padding: 96px 0;
+  background: #ffffff;
+}
+
+.firm-location-heading {
+  margin-bottom: 42px;
+}
+
+.firm-location-heading h2 {
+  margin: 0;
+  color: var(--navy);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(3rem, 5vw, 4.8rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  font-weight: 600;
+}
+
+.firm-location-heading p:last-child {
+  max-width: 920px;
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 1.03rem;
+  line-height: 1.8;
+}
+
+.office-location-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 34px;
+}
+
+.office-location-card {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 36px;
+  align-items: center;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 14px 34px rgba(13, 27, 63, 0.06);
+}
+
+.office-location-card-featured {
+  border-color: rgba(12, 30, 64, 0.12);
+}
+
+.office-location-image {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+
+.office-location-image img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+.office-location-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.office-location-city {
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.office-location-content h3 {
+  margin: 0 0 18px;
+  color: var(--navy);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+  font-weight: 600;
+}
+
+.office-location-content p {
+  margin: 0;
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.78;
+}
+
+.office-location-content .firm-address-card {
+  margin: 0 0 22px;
+  padding: 22px 24px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #f8fbff;
+}
+
+.office-location-content .firm-address-card h4 {
+  margin: 0 0 10px;
+  color: var(--navy);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.office-location-content .firm-address-card p {
+  margin: 0;
+  color: var(--navy);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+@media (max-width: 1120px) {
+  .office-location-card {
+    grid-template-columns: 1fr;
+  }
+
+  .office-location-image img {
+    height: 360px;
+  }
+}
+
+@media (max-width: 760px) {
+  .firm-location-section {
+    padding: 66px 0;
+  }
+
+  .office-location-card {
+    padding: 18px;
+    gap: 22px;
+  }
+
+  .office-location-image img {
+    height: 260px;
+  }
+
+  .office-location-content h3 {
+    font-size: 2.3rem;
+  }
+
+  .office-location-content .firm-address-card h4 {
+    font-size: 1.7rem;
+  }
+}
