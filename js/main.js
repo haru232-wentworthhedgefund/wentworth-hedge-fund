@@ -1,95 +1,54 @@
-const header = document.querySelector(".site-header");
-const menuToggle = document.querySelector(".menu-toggle");
-const siteNav = document.querySelector(".site-nav");
-const yearElement = document.getElementById("currentYear");
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector("[data-slider-track]");
+  const prevBtn = document.querySelector("[data-slider-prev]");
+  const nextBtn = document.querySelector("[data-slider-next]");
 
-if (yearElement) {
-  yearElement.textContent = new Date().getFullYear();
-}
+  if (!track || !prevBtn || !nextBtn) return;
 
-function updateHeaderOnScroll() {
-  if (!header) return;
+  const cards = Array.from(track.children);
+  let currentIndex = 0;
 
-  if (window.scrollY > 10) {
-    header.classList.add("scrolled");
-  } else {
-    header.classList.remove("scrolled");
+  function getVisibleCards() {
+    if (window.innerWidth <= 860) return 1;
+    if (window.innerWidth <= 1180) return 2;
+    return 3;
   }
-}
 
-updateHeaderOnScroll();
-window.addEventListener("scroll", updateHeaderOnScroll);
+  function updateSlider() {
+    const visibleCards = getVisibleCards();
+    const maxIndex = Math.max(0, cards.length - visibleCards);
 
-if (menuToggle && siteNav) {
-  menuToggle.addEventListener("click", () => {
-    const isOpen = siteNav.classList.toggle("is-open");
-    menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-  });
-}
-
-window.addEventListener("resize", () => {
-  if (window.innerWidth > 980 && siteNav) {
-    siteNav.classList.remove("is-open");
-    if (menuToggle) {
-      menuToggle.setAttribute("aria-expanded", "false");
+    if (currentIndex > maxIndex) {
+      currentIndex = maxIndex;
     }
+
+    const firstCard = cards[0];
+    if (!firstCard) return;
+
+    const cardWidth = firstCard.getBoundingClientRect().width;
+    const gap = parseFloat(getComputedStyle(track).gap || "0");
+    const offset = currentIndex * (cardWidth + gap);
+
+    track.style.transform = `translateX(-${offset}px)`;
+
+    prevBtn.disabled = currentIndex === 0;
+    nextBtn.disabled = currentIndex >= maxIndex;
   }
 
-  updateBusinessCarousel();
+  prevBtn.addEventListener("click", () => {
+    const step = getVisibleCards();
+    currentIndex = Math.max(0, currentIndex - step);
+    updateSlider();
+  });
+
+  nextBtn.addEventListener("click", () => {
+    const step = getVisibleCards();
+    const maxIndex = Math.max(0, cards.length - getVisibleCards());
+    currentIndex = Math.min(maxIndex, currentIndex + step);
+    updateSlider();
+  });
+
+  window.addEventListener("resize", updateSlider);
+
+  updateSlider();
 });
-
-/* Business carousel */
-const businessTrack = document.getElementById("businessTrack");
-const businessPrev = document.getElementById("businessPrev");
-const businessNext = document.getElementById("businessNext");
-
-let currentBusinessIndex = 0;
-
-function getVisibleSlides() {
-  if (window.innerWidth <= 640) return 1;
-  if (window.innerWidth <= 980) return 2;
-  return 3;
-}
-
-function updateBusinessCarousel() {
-  if (!businessTrack) return;
-
-  const slides = businessTrack.querySelectorAll(".business-card");
-  const visibleSlides = getVisibleSlides();
-  const maxIndex = Math.max(0, slides.length - visibleSlides);
-
-  if (currentBusinessIndex > maxIndex) {
-    currentBusinessIndex = maxIndex;
-  }
-
-  const firstSlide = slides[0];
-  if (!firstSlide) return;
-
-  const trackStyle = window.getComputedStyle(businessTrack);
-  const gap = parseFloat(trackStyle.columnGap || trackStyle.gap || 24);
-  const slideWidth = firstSlide.getBoundingClientRect().width + gap;
-
-  businessTrack.style.transform = `translateX(-${currentBusinessIndex * slideWidth}px)`;
-
-  if (businessPrev) {
-    businessPrev.disabled = currentBusinessIndex === 0;
-  }
-
-  if (businessNext) {
-    businessNext.disabled = currentBusinessIndex >= maxIndex;
-  }
-}
-
-if (businessPrev && businessNext && businessTrack) {
-  businessPrev.addEventListener("click", () => {
-    currentBusinessIndex -= 1;
-    updateBusinessCarousel();
-  });
-
-  businessNext.addEventListener("click", () => {
-    currentBusinessIndex += 1;
-    updateBusinessCarousel();
-  });
-
-  window.addEventListener("load", updateBusinessCarousel);
-}
