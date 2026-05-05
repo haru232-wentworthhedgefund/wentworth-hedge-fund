@@ -4,14 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Client Login | Wentworth Hedge Fund</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
   <link rel="stylesheet" href="../css/style.css" />
 </head>
-<body class="inner-page">
+<body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="../index.html" class="site-brand">
-        <span class="brand-main">Wentworth</span>
-        <span class="brand-sub">Hedge Fund</span>
+      <a href="../index.html" class="brand-link">
+        <img src="../images/wentworth-logo.png" alt="Wentworth Hedge Fund" class="brand-logo" />
       </a>
 
       <button class="menu-toggle" aria-expanded="false" aria-controls="navMenu">
@@ -25,7 +32,7 @@
           <li><a href="./market-intelligence.html" class="nav-link">Market Intelligence</a></li>
           <li><a href="./our-firm.html" class="nav-link">Our Firm</a></li>
           <li><a href="./careers.html" class="nav-link">Careers</a></li>
-          <li><a href="./client-login.html" class="nav-link nav-link-button active">Client Login</a></li>
+          <li><a href="./client-login.html" class="nav-link nav-pill active">Client Login</a></li>
         </ul>
       </nav>
     </div>
@@ -33,21 +40,22 @@
 
   <main>
     <section class="page-hero">
-      <div class="container">
-        <p class="section-kicker">Client Login</p>
-        <h1 class="section-title">Client portal access.</h1>
-        <p class="section-description">
-          This is a static demo interface only. No real authentication or credential collection is implemented.
+      <div class="container page-hero-inner">
+        <p class="page-kicker">Client Login</p>
+        <h1 class="page-title">Client portal access.</h1>
+        <p class="page-description">
+          This remains a static demo interface only. No real login system, credential storage,
+          or secure authentication is implemented in this version.
         </p>
       </div>
     </section>
 
-    <section class="content-block">
-      <div class="container login-wrap">
+    <section class="page-section">
+      <div class="container login-layout">
         <div class="login-card">
           <h2>Demo Portal Only</h2>
           <p>
-            This interface is for design demonstration purposes only and should not be used to submit real credentials.
+            This page is a design placeholder only and should not be used to enter real credentials.
           </p>
 
           <form action="#" method="get">
@@ -61,30 +69,22 @@
               <input id="password" type="password" placeholder="Enter demo password" />
             </div>
 
-            <button type="submit" class="btn btn-dark">Enter Demo Portal</button>
+            <button type="submit" class="btn btn-primary btn-block">Enter Demo Portal</button>
           </form>
         </div>
 
-        <div class="login-meta">
-          <div class="meta-box">
-            <h3>Secure Architecture</h3>
-            <p>
-              A real client portal would require secure backend authentication, encrypted sessions, and HTTPS.
-            </p>
+        <div class="meta-grid">
+          <div class="meta-card">
+            <h3>Security Reminder</h3>
+            <p>A real portal would require a secure backend, authentication logic, and HTTPS.</p>
           </div>
-
-          <div class="meta-box">
-            <h3>Demo Notice</h3>
-            <p>
-              This page intentionally does not process or store user credentials.
-            </p>
+          <div class="meta-card">
+            <h3>No Credential Collection</h3>
+            <p>This page intentionally does not process, verify, or store any passwords.</p>
           </div>
-
-          <div class="meta-box">
-            <h3>Future Expansion</h3>
-            <p>
-              Later we can redesign this page visually while still keeping it as a front-end-only placeholder.
-            </p>
+          <div class="meta-card">
+            <h3>Future Upgrade</h3>
+            <p>Later we can redesign this page visually while keeping it front-end only if needed.</p>
           </div>
         </div>
       </div>
@@ -93,9 +93,9 @@
 
   <footer class="site-footer">
     <div class="container footer-grid">
-      <div class="footer-brand-column">
-        <a href="../index.html" class="footer-brand">Wentworth Hedge Fund</a>
-        <p class="footer-note">Research-driven strategies, global market perspective, and institutional risk discipline.</p>
+      <div class="footer-brand-block">
+        <img src="../images/wentworth-logo.png" alt="Wentworth Hedge Fund" class="footer-logo" />
+        <p class="footer-text">Independent investment firm with a research-driven and globally informed approach.</p>
       </div>
       <div class="footer-column">
         <h4>Explore</h4>
@@ -116,13 +116,13 @@
       <div class="footer-column">
         <h4>Contact</h4>
         <ul>
-          <li><a href="mailto:info@wentworthhedgefund.com">info@wentworthhedgefund.com</a></li>
+          <li><a href="mailto:wentworthhedgefund@outlook.com">wentworthhedgefund@outlook.com</a></li>
         </ul>
       </div>
     </div>
     <div class="container footer-bottom">
       <p>© <span id="currentYear"></span> Wentworth Hedge Fund. All rights reserved.</p>
-      <p class="footer-legal">For informational purposes only. No offer, solicitation, or investment advice is provided on this website.</p>
+      <p class="footer-legal">This website is for informational purposes only and does not constitute investment advice.</p>
     </div>
   </footer>
 
