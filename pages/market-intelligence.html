@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Market Intelligence | Wentworth Hedge Fund</title>
+  <meta
+    name="description"
+    content="Wentworth Hedge Fund market intelligence across global equities, commodities, macro regimes, Japan equities, and China property market analysis."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand-link" aria-label="Wentworth Hedge Fund home">
+        <span class="brand-line">Wentworth</span>
+        <span class="brand-line">Hedge Fund</span>
+      </a>
+
+      <button class="menu-toggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="primaryNav" aria-label="Primary navigation">
+        <a href="./what-we-do.html">What We Do</a>
+        <a href="./insights.html">Insights</a>
+        <a href="./market-intelligence.html">Market Intelligence</a>
+        <a href="./our-firm.html">Our Firm</a>
+        <a href="./careers.html">Careers</a>
+        <a href="./client-login.html" class="client-login-link">Client Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="market-page">
+
+    <!-- HERO -->
+    <section class="market-hero">
+      <div class="market-hero-shade"></div>
+
+      <div class="container market-hero-inner">
+        <p class="market-eyebrow">Market Intelligence</p>
+        <h1>Global signals, disciplined interpretation.</h1>
+        <p>
+          Wentworth Hedge Fund monitors cross-asset markets through a research-driven framework
+          spanning equities, rates, commodities, digital assets, policy regimes, and regional
+          structural change. Our objective is to convert market noise into investable judgment.
+        </p>
+
+        <div class="market-hero-actions">
+          <a href="#live-market-data" class="btn btn-primary">Live Market Data</a>
+          <a href="#wentworth-view" class="btn btn-outline-light">Read Market View</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIVE TICKER -->
+    <section class="market-ticker-section" id="live-market-data">
+      <div class="container">
+        <div class="market-section-head">
+          <p class="market-eyebrow">Live Monitor</p>
+          <h2>Cross-asset market tape.</h2>
+          <p>
+            A real-time monitor of core benchmarks and macro-sensitive assets followed by the firm.
+            Data may be delayed depending on the third-party feed.
+          </p>
+        </div>
+
+        <div class="market-ticker-box">
+          <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
+              async
+            >
+            {
+              "symbols": [
+                { "proName": "TVC:NI225", "title": "Nikkei 225" },
+                { "proName": "DJ:DJI", "title": "Dow Jones" },
+                { "proName": "NASDAQ:IXIC", "title": "Nasdaq Composite" },
+                { "proName": "SSE:000001", "title": "Shanghai Composite" },
+                { "proName": "BITSTAMP:BTCUSD", "title": "Bitcoin" },
+                { "proName": "TVC:UKOIL", "title": "Brent Crude" },
+                { "proName": "TVC:USOIL", "title": "WTI Crude" },
+                { "proName": "TVC:GOLD", "title": "Gold" },
+                { "proName": "TVC:SILVER", "title": "Silver" }
+              ],
+              "showSymbolLogo": false,
+              "isTransparent": true,
+              "displayMode": "adaptive",
+              "colorTheme": "light",
+              "locale": "en"
+            }
+            </script>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SNAPSHOT CARDS -->
+    <section class="market-snapshot-section">
+      <div class="container">
+        <div class="market-snapshot-grid">
+          <article class="market-snapshot-card">
+            <span>01</span>
+            <h3>Rates & Liquidity</h3>
+            <p>
+              Higher-for-longer policy risk continues to influence equity duration, funding costs,
+              credit conditions, and valuation dispersion.
+            </p>
+          </article>
+
+          <article class="market-snapshot-card">
+            <span>02</span>
+            <h3>Japan Re-rating</h3>
+            <p>
+              Japan remains a strategic market where governance reform, inflation normalization,
+              and corporate capital discipline may support structural repricing.
+            </p>
+          </article>
+
+          <article class="market-snapshot-card">
+            <span>03</span>
+            <h3>Energy Security</h3>
+            <p>
+              Oil and gas markets remain sensitive to geopolitical pressure points, shipping routes,
+              inventory cycles, and OPEC+ supply discipline.
+            </p>
+          </article>
+
+          <article class="market-snapshot-card">
+            <span>04</span>
+            <h3>China Demand Reset</h3>
+            <p>
+              China’s property and household balance-sheet adjustment continues to reshape regional
+              demand, commodities, and investor risk appetite.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARKET SIGNAL DASHBOARD -->
+    <section class="market-dashboard-section">
+      <div class="container market-dashboard-grid">
+        <div class="market-dashboard-copy">
+          <p class="market-eyebrow">Signal Dashboard</p>
+          <h2>Framework for interpreting global market regimes.</h2>
+          <p>
+            We organize market intelligence around four linked variables: growth, liquidity,
+            inflation, and risk appetite. The interaction among these variables determines whether
+            markets reward duration, cyclicality, quality, defensiveness, commodities, or cash-flow
+            durability.
+          </p>
+
+          <div class="market-signal-list">
+            <div>
+              <strong>Growth</strong>
+              <span>Corporate earnings, labor conditions, manufacturing activity, and trade volume.</span>
+            </div>
+            <div>
+              <strong>Liquidity</strong>
+              <span>Central-bank policy, funding conditions, credit spreads, and money-market stress.</span>
+            </div>
+            <div>
+              <strong>Inflation</strong>
+              <span>Energy costs, wage pressure, housing components, goods disinflation, and currency effects.</span>
+            </div>
+            <div>
+              <strong>Risk Appetite</strong>
+              <span>Volatility, positioning, equity breadth, credit issuance, and cross-asset correlation.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="market-dashboard-visual">
+          <svg viewBox="0 0 900 620" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="dashBg" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#eef6fb"/>
+                <stop offset="100%" stop-color="#d9e8f6"/>
+              </linearGradient>
+            </defs>
+
+            <rect x="0" y="0" width="900" height="620" rx="34" fill="url(#dashBg)" />
+            <rect x="70" y="70" width="760" height="450" rx="30" fill="#ffffff" opacity="0.94" />
+
+            <line x1="150" y1="430" x2="750" y2="430" stroke="#b7c7d8" stroke-width="4" />
+            <line x1="150" y1="150" x2="150" y2="430" stroke="#b7c7d8" stroke-width="4" />
+
+            <path d="M150 390 C230 335, 285 360, 350 290 S470 215, 545 245 S665 225, 750 155"
+              fill="none" stroke="#0b2344" stroke-width="10" stroke-linecap="round" />
+
+            <circle cx="150" cy="390" r="13" fill="#0b2344" />
+            <circle cx="350" cy="290" r="13" fill="#0b2344" />
+            <circle cx="545" cy="245" r="13" fill="#0b2344" />
+            <circle cx="750" cy="155" r="13" fill="#0b2344" />
+
+            <rect x="210" y="330" width="54" height="100" rx="10" fill="#9ab4ce" />
+            <rect x="300" y="280" width="54" height="150" rx="10" fill="#7c9fbe" />
+            <rect x="390" y="235" width="54" height="195" rx="10" fill="#5f86ab" />
+            <rect x="480" y="260" width="54" height="170" rx="10" fill="#416c98" />
+            <rect x="570" y="205" width="54" height="225" rx="10" fill="#0b2344" />
+
+            <circle cx="685" cy="330" r="92" fill="#eef6fb" stroke="#b7c7d8" stroke-width="5" />
+            <path d="M685 330 L685 238 A92 92 0 0 1 777 330 Z" fill="#0b2344" opacity="0.85" />
+            <path d="M685 330 L777 330 A92 92 0 0 1 640 410 Z" fill="#7c9fbe" />
+            <path d="M685 330 L640 410 A92 92 0 0 1 685 238 Z" fill="#c8d7e6" />
+
+            <text x="110" y="565" fill="#0b2344" font-size="32" font-family="Georgia, serif">
+              Market Signal Dashboard
+            </text>
+            <text x="110" y="595" fill="#52647c" font-size="18" font-family="Arial, sans-serif">
+              Growth · liquidity · inflation · risk appetite
+            </text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- NIKKEI TOP 50 -->
+    <section class="nikkei-section">
+      <div class="container">
+        <div class="market-section-head">
+          <p class="market-eyebrow">Japan Equities</p>
+          <h2>Nikkei 225 top 50 focus constituents.</h2>
+          <p>
+            This watchlist tracks major Nikkei 225 influence names followed by our Japan equity
+            research process. The indicative ranking is for monitoring and research context only.
+          </p>
+        </div>
+
+        <div class="nikkei-toolbar">
+          <input type="text" id="nikkeiSearch" placeholder="Search company or ticker..." />
+          <div>
+            <button id="refreshNikkeiBtn" class="btn btn-primary small-btn">Refresh Data</button>
+            <span id="nikkeiStatus">Loading live quotes...</span>
+          </div>
+        </div>
+
+        <div class="nikkei-table-wrap">
+          <table class="nikkei-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Company</th>
+                <th>Ticker</th>
+                <th>Sector</th>
+                <th>Indicative Weight</th>
+                <th>Price</th>
+                <th>Change %</th>
+              </tr>
+            </thead>
+            <tbody id="nikkeiTableBody">
+              <tr>
+                <td colspan="7">Loading live market data...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="market-footnote">
+          Live pricing is retrieved from public quotation endpoints and may be delayed, interrupted,
+          or temporarily unavailable. For formal investment decision-making, institutional data vendors
+          and official exchange feeds should be used.
+        </p>
+      </div>
+    </section>
+
+    <!-- GLOBAL MARKET VIEW -->
+    <section class="market-longform-section" id="wentworth-view">
+      <div class="container market-longform-grid">
+        <aside class="market-longform-side">
+          <p class="market-eyebrow">Wentworth View</p>
+          <h2>Global investment market outlook.</h2>
+
+          <div class="market-side-card">
+            <span>Core Thesis</span>
+            <p>
+              We believe markets are transitioning from liquidity-led beta toward a more selective
+              regime defined by earnings quality, capital discipline, regional divergence, and
+              policy-sensitive asset allocation.
+            </p>
+          </div>
+
+          <div class="market-side-card">
+            <span>Portfolio Implication</span>
+            <p>
+              Investors should combine high-quality cash-flow assets, Japan re-rating exposure,
+              AI infrastructure selectivity, commodity awareness, and downside liquidity discipline.
+            </p>
+          </div>
+        </aside>
+
+        <article class="market-longform-article">
+          <p>
+            我们对当前全球投资市场的核心判断是：全球资产定价正在从过去高度依赖流动性扩张的阶段，转向一个更加重视盈利质量、资本效率、
+            政策路径和资产负债表韧性的阶段。过去十余年，低利率环境放大了成长资产的估值弹性，也推动了大量资产价格的系统性重估；
+            但在通胀中枢抬升、财政赤字扩张、央行政策正常化以及地缘政治扰动持续存在的环境下，市场的定价逻辑已经发生变化。
+            对机构投资者而言，未来的关键不再是简单判断风险资产是否整体上涨，而是识别哪些资产在新的宏观结构下仍能维持现金流质量、
+            定价能力、资本回报和长期竞争优势。
+          </p>
+
+          <p>
+            美国市场仍然是全球资产定价的核心。美元利率、美国企业盈利、科技资本开支和美债期限溢价，仍然决定着全球资金成本和风险偏好。
+            但美国市场内部的分化已经越来越明显。大型科技公司和具备强现金流的龙头企业仍享受估值溢价，而部分依赖远期叙事、盈利兑现不足、
+            或资产负债表脆弱的公司，则更容易在利率上行或风险偏好回落时受到冲击。我们认为，美股未来的收益来源将更多来自盈利兑现、
+            股东回报、AI 资本开支效率和企业护城河，而不是单纯依赖估值扩张。
+          </p>
+
+          <p>
+            AI 基础设施周期仍然是全球权益市场最重要的结构性主题之一。半导体设备、先进封装、数据中心电力系统、企业软件、
+            工业自动化和网络安全等领域，仍可能获得持续资本流入。但我们不认为 AI 主题可以被无差别配置。未来市场将更关注资本开支回报率、
+            客户集中度、利润率稳定性和真实需求可持续性。换句话说，AI 行情正在从主题扩散进入基本面验证阶段。机构投资者需要区分
+            “长期生产率提升的受益者”和“短期估值叙事的跟随者”。
+          </p>
+
+          <p>
+            日本市场在全球配置中的重要性正在上升。日本的吸引力不仅来自低估值，更来自企业治理改革、通胀预期回归、名义增长改善、
+            资本效率提升和股东回报意识增强。东京证券交易所对低市净率公司的治理推动，叠加企业回购、分红、交叉持股减少和资本配置优化，
+            正在改变全球投资者对日本资产的定价方式。我们认为，日本并非短期交易性市场，而是一个具备中长期结构性重估基础的市场。
+          </p>
+
+          <p>
+            同时，日本央行政策正常化也需要被审慎理解。利率上行本身并不必然破坏日本权益资产，关键在于名义 GDP、工资增长和企业盈利
+            是否能够共同改善。如果政策正常化发生在经济韧性增强、通胀预期温和回升和企业定价能力改善的背景下，那么对银行、保险、
+            精选内需和治理改善类企业反而可能形成支持。当然，若日元快速升值或全球流动性环境急剧收紧，则出口导向行业和高估值成长板块
+            会面临更大压力。
+          </p>
+
+          <p>
+            欧洲市场的机会更偏向结构选择。能源安全、国防开支、绿色基础设施、工业自动化、高端制造和医疗健康仍然是值得关注的方向。
+            但欧洲整体增长动能相对有限，区域内部财政能力、产业竞争力和政策执行效率差异明显。因此，欧洲资产更适合作为全球组合中的
+            风格平衡和估值修复来源，而非单一高弹性增长仓位。
+          </p>
+
+          <p>
+            中国及更广泛的新兴市场则处于重新定价过程。中国经济的旧增长模式，尤其是依赖地产扩张、地方土地财政和高杠杆固定资产投资的模式，
+            已经显著弱化。市场正在重新评估中国资产的风险溢价、盈利可见度和政策传导效率。我们并不认为中国市场不存在机会，但机会更可能
+            出现在高端制造、出口竞争力较强的产业链、现金流健康的消费龙头、以及具备全球竞争力的科技与工业企业中。
+          </p>
+
+          <p>
+            大宗商品仍然是全球组合中不可忽视的风险对冲和宏观信号。原油价格同时反映全球需求、OPEC+ 产量约束、库存周期和地缘政治风险。
+            黄金则受到实际利率、央行购金、美元信用预期和避险需求共同影响。白银兼具工业金属和贵金属属性，波动性更高但也更具周期弹性。
+            我们认为商品市场不会单边平稳运行，但在宏观不确定性上升时期，商品可以为组合提供重要的风险分散功能。
+          </p>
+
+          <p>
+            从组合构建角度，我们当前强调三点：第一，坚持跨资产框架，避免只依据单一市场情绪做判断；第二，强调盈利质量、自由现金流、
+            资本回报和治理纪律；第三，通过仓位管理和风险预算，在保持长期机会敞口的同时控制极端下行风险。我们不建议盲目追逐短期主题，
+            也不主张因局部风险而完全退出风险资产。更合理的做法是围绕高质量资产、结构性成长、政策受益和宏观对冲构建平衡组合。
+          </p>
+
+          <p>
+            总体而言，我们对全球市场保持审慎积极。机会仍然存在，但机会的分布已经更加分化。未来真正重要的是研究深度、风险纪律和跨周期视角。
+            在新的市场环境中，能够识别结构性变化、理解政策传导、并将研究转化为执行纪律的机构投资者，将更有可能获得可持续的超额收益。
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CHINA PROPERTY -->
+    <section class="china-property-section">
+      <div class="container china-property-grid">
+        <div class="china-chart-card">
+          <p class="market-eyebrow">Special Column</p>
+          <h2>China property stress map.</h2>
+
+          <svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="900" height="560" rx="32" fill="#eef6fb" />
+            <rect x="85" y="80" width="730" height="360" rx="26" fill="#ffffff" opacity="0.96" />
+
+            <text x="120" y="135" font-size="24" fill="#0b2344" font-family="Georgia, serif">
+              Key Pressure Channels
+            </text>
+
+            <line x1="130" y1="390" x2="755" y2="390" stroke="#c3d1df" stroke-width="4" />
+            <line x1="130" y1="180" x2="130" y2="390" stroke="#c3d1df" stroke-width="4" />
+
+            <rect x="170" y="220" width="70" height="170" rx="10" fill="#668bb7" />
+            <rect x="290" y="170" width="70" height="220" rx="10" fill="#315a8b" />
+            <rect x="410" y="245" width="70" height="145" rx="10" fill="#8eabc9" />
+            <rect x="530" y="200" width="70" height="190" rx="10" fill="#4a719e" />
+            <rect x="650" y="260" width="70" height="130" rx="10" fill="#a9bfd6" />
+
+            <path d="M170 205 C255 250, 305 230, 390 285 S525 335, 640 355 S705 360, 735 370"
+              fill="none" stroke="#0b2344" stroke-width="8" stroke-linecap="round" />
+
+            <circle cx="170" cy="205" r="10" fill="#0b2344" />
+            <circle cx="390" cy="285" r="10" fill="#0b2344" />
+            <circle cx="640" cy="355" r="10" fill="#0b2344" />
+            <circle cx="735" cy="370" r="10" fill="#0b2344" />
+
+            <text x="150" y="465" font-size="17" fill="#52647c" font-family="Arial, sans-serif">Affordability</text>
+            <text x="278" y="465" font-size="17" fill="#52647c" font-family="Arial, sans-serif">Vacancy</text>
+            <text x="390" y="465" font-size="17" fill="#52647c" font-family="Arial, sans-serif">Income</text>
+            <text x="510" y="465" font-size="17" fill="#52647c" font-family="Arial, sans-serif">Credit</text>
+            <text x="630" y="465" font-size="17" fill="#52647c" font-family="Arial, sans-serif">Sentiment</text>
+
+            <text x="110" y="520" font-size="20" fill="#0b2344" font-family="Georgia, serif">
+              Property pricing pressure is structural, not merely cyclical.
+            </text>
+          </svg>
+        </div>
+
+        <article class="china-property-copy">
+          <p class="market-eyebrow">China Property Outlook</p>
+          <h2>Weak recovery, slow repair, strong divergence.</h2>
+
+          <p>
+            我们对中国房地产市场的中期判断偏谨慎。当前中国房价所面临的并不是单一的周期性调整，而是需求端、收入端、人口结构、
+            供给端、地方财政模式和资产回报预期共同变化所引发的系统性再定价。过去中国房地产上涨的核心逻辑，是城市化、高储蓄率、
+            信贷扩张、土地财政和居民对房价长期上涨的强预期共同作用。但现在这些因素正在同步减弱。
+          </p>
+
+          <p>
+            首先，居民购买力已经成为制约房价修复的核心因素。即便部分城市房价有所调整，房价相对于居民平均工资和家庭可支配收入而言，
+            仍然处在较高水平。对于普通家庭而言，购房不再只是资产配置决策，而是长期负债承诺。在就业不确定性、收入增速放缓、
+            青年就业压力较高和家庭资产风险偏好下降的背景下，居民更倾向于保持现金流安全，而不是继续扩大杠杆。
+          </p>
+
+          <p>
+            第二，写字楼空置率高企是房地产市场压力的重要信号。办公楼市场反映的是企业真实扩张意愿和商业活动强度。当写字楼供应仍在释放、
+            企业租赁需求却不足时，租金水平和资产资本化率都会承压。办公资产如果难以提供稳定现金流回报，就会向市场传递一个更深层信号：
+            房地产整体资产价格中枢需要重新评估。商业地产回报率下降，也会影响住宅投资者对房产长期回报的预期。
+          </p>
+
+          <p>
+            第三，开发商资产负债表修复仍需要时间。过去高杠杆、高周转、高拿地的模式，在销售回款放缓和融资约束强化后已经难以持续。
+            虽然政策层面持续推动保交楼、降利率、优化限购、支持收储和改善融资环境，但政策的主要目标更偏向防止系统性风险，
+            而不是重新启动全面上涨周期。换言之，政策托底可以减缓下行速度，但很难迅速恢复居民和企业对房地产的长期信心。
+          </p>
+
+          <p>
+            第四，人口和城市分化会进一步拉大房价表现差距。核心城市的核心地段仍可能具有相对韧性，尤其是产业、教育、医疗、交通和公共资源
+            集聚能力较强的区域。但大量三四线城市和人口净流出区域，将面临更持久的库存压力和需求不足。未来中国房价不会简单表现为全国统一方向，
+            而更可能呈现明显的城市分层、板块分化和资产质量分化。
+          </p>
+
+          <p>
+            第五，房地产投资属性正在下降。过去居民买房常常基于“房价长期上涨”的假设，但当租金回报偏低、总价压力较大、流动性变弱、
+            转手周期变长，且价格上涨预期减弱时，房地产作为投资资产的吸引力会明显下降。这种预期变化往往比价格调整本身更重要，
+            因为它会改变居民资产配置行为，并降低新增需求弹性。
+          </p>
+
+          <p>
+            因此，我们认为中国房地产未来更可能是“弱复苏、慢修复、强分化”的格局。部分核心资产仍有支撑，但广义市场难以快速重回过去的
+            普涨模式。对机构投资者而言，关键不在于简单判断房价何时见底，而在于识别哪些城市、哪些地段、哪些物业类型具备真实现金流、
+            人口支撑和长期产业基础。未来房地产的机会将更偏向存量资产运营、保障性住房、城市更新、核心区优质住宅和产业相关不动产，
+            而非高杠杆开发和全国性价格反弹。
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- DISCLOSURE -->
+    <section class="market-disclosure-section">
+      <div class="container">
+        <div class="market-disclosure-box">
+          <h3>Important disclosure</h3>
+          <p>
+            This page is provided for informational and educational purposes only. Nothing on this page
+            constitutes investment advice, an offer to sell, or a solicitation to buy any security,
+            commodity, digital asset, or financial product. Market data may be delayed or unavailable.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand-block">
+        <a href="../index.html" class="brand-link footer-brand-link">
+          <span class="brand-line">Wentworth</span>
+          <span class="brand-line">Hedge Fund</span>
+        </a>
+
+        <p>
+          Independent investment firm with a research-driven, globally informed,
+          and institutionally disciplined approach.
+        </p>
+
+        <p class="copyright">© 2026 Wentworth Hedge Fund. All rights reserved.</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>What We Do</h4>
+        <a href="./what-we-do.html">Asset Management</a>
+        <a href="./what-we-do.html">Financial Strategy Consulting</a>
+        <a href="./what-we-do.html">Market Research</a>
+        <a href="./what-we-do.html">Japanese Equity Investment</a>
+        <a href="./what-we-do.html">Global Trade</a>
+        <a href="./what-we-do.html">Institutional Travel</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>Insights</h4>
+        <a href="./insights.html">Macro Briefs</a>
+        <a href="./insights.html">Market Updates</a>
+        <a href="./insights.html">Research Publications</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>Our Firm</h4>
+        <a href="./our-firm.html">About Us</a>
+        <a href="./our-firm.html">Investment Philosophy</a>
+        <a href="./our-firm.html">Governance</a>
+        <a href="./our-firm.html">Location</a>
+      </div>
+
+      <div class="footer-column contact-column">
+        <h4>Contact</h4>
+        <p>
+          Wentworth Hedge Fund<br />
+          Tokyo, Japan<br />
+          <a href="mailto:wentworthhedgefund@outlook.com">wentworthhedgefund@outlook.com</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+
+  <script>
+    const nikkeiTop50 = [
+      { rank: 1, symbol: "6857.T", name: "Advantest", sector: "Semiconductors", weight: 10.10 },
+      { rank: 2, symbol: "9983.T", name: "Fast Retailing", sector: "Retail", weight: 8.40 },
+      { rank: 3, symbol: "8035.T", name: "Tokyo Electron", sector: "Semiconductor Equipment", weight: 6.80 },
+      { rank: 4, symbol: "9984.T", name: "SoftBank Group", sector: "Telecom / Internet", weight: 4.90 },
+      { rank: 5, symbol: "9433.T", name: "KDDI", sector: "Telecom", weight: 3.80 },
+      { rank: 6, symbol: "6762.T", name: "TDK", sector: "Electronics", weight: 3.20 },
+      { rank: 7, symbol: "6954.T", name: "FANUC", sector: "Factory Automation", weight: 2.90 },
+      { rank: 8, symbol: "6367.T", name: "Daikin Industries", sector: "Industrials", weight: 2.70 },
+      { rank: 9, symbol: "6098.T", name: "Recruit Holdings", sector: "Services", weight: 2.50 },
+      { rank: 10, symbol: "6920.T", name: "Lasertec", sector: "Semiconductors", weight: 2.40 },
+      { rank: 11, symbol: "6861.T", name: "Keyence", sector: "Factory Automation", weight: 2.30 },
+      { rank: 12, symbol: "4063.T", name: "Shin-Etsu Chemical", sector: "Materials", weight: 2.20 },
+      { rank: 13, symbol: "6758.T", name: "Sony Group", sector: "Electronics", weight: 2.10 },
+      { rank: 14, symbol: "9434.T", name: "SoftBank Corp.", sector: "Telecom", weight: 2.00 },
+      { rank: 15, symbol: "9432.T", name: "NTT", sector: "Telecom", weight: 1.90 },
+      { rank: 16, symbol: "6981.T", name: "Murata Manufacturing", sector: "Electronics", weight: 1.80 },
+      { rank: 17, symbol: "6594.T", name: "Nidec", sector: "Industrials", weight: 1.70 },
+      { rank: 18, symbol: "4543.T", name: "Terumo", sector: "Medical Technology", weight: 1.60 },
+      { rank: 19, symbol: "9766.T", name: "Konami Group", sector: "Entertainment", weight: 1.50 },
+      { rank: 20, symbol: "2801.T", name: "Kikkoman", sector: "Consumer Staples", weight: 1.40 },
+      { rank: 21, symbol: "3382.T", name: "Seven & i Holdings", sector: "Retail", weight: 1.35 },
+      { rank: 22, symbol: "7974.T", name: "Nintendo", sector: "Entertainment", weight: 1.30 },
+      { rank: 23, symbol: "6501.T", name: "Hitachi", sector: "Industrials / Technology", weight: 1.25 },
+      { rank: 24, symbol: "6702.T", name: "Fujitsu", sector: "IT Services", weight: 1.20 },
+      { rank: 25, symbol: "6701.T", name: "NEC", sector: "IT Services", weight: 1.15 },
+      { rank: 26, symbol: "7011.T", name: "Mitsubishi Heavy Industries", sector: "Industrials", weight: 1.10 },
+      { rank: 27, symbol: "6301.T", name: "Komatsu", sector: "Machinery", weight: 1.05 },
+      { rank: 28, symbol: "4568.T", name: "Daiichi Sankyo", sector: "Pharmaceuticals", weight: 1.00 },
+      { rank: 29, symbol: "4519.T", name: "Chugai Pharmaceutical", sector: "Pharmaceuticals", weight: 0.95 },
+      { rank: 30, symbol: "4502.T", name: "Takeda Pharmaceutical", sector: "Pharmaceuticals", weight: 0.90 },
+      { rank: 31, symbol: "4578.T", name: "Otsuka Holdings", sector: "Pharmaceuticals", weight: 0.85 },
+      { rank: 32, symbol: "9843.T", name: "Nitori Holdings", sector: "Retail", weight: 0.80 },
+      { rank: 33, symbol: "8766.T", name: "Tokio Marine Holdings", sector: "Insurance", weight: 0.78 },
+      { rank: 34, symbol: "8802.T", name: "Mitsubishi Estate", sector: "Real Estate", weight: 0.75 },
+      { rank: 35, symbol: "8801.T", name: "Mitsui Fudosan", sector: "Real Estate", weight: 0.73 },
+      { rank: 36, symbol: "9020.T", name: "East Japan Railway", sector: "Transportation", weight: 0.70 },
+      { rank: 37, symbol: "9022.T", name: "Central Japan Railway", sector: "Transportation", weight: 0.68 },
+      { rank: 38, symbol: "7751.T", name: "Canon", sector: "Electronics", weight: 0.66 },
+      { rank: 39, symbol: "6902.T", name: "Denso", sector: "Auto Parts", weight: 0.64 },
+      { rank: 40, symbol: "6971.T", name: "Kyocera", sector: "Electronics", weight: 0.62 },
+      { rank: 41, symbol: "6723.T", name: "Renesas Electronics", sector: "Semiconductors", weight: 0.60 },
+      { rank: 42, symbol: "7735.T", name: "SCREEN Holdings", sector: "Semiconductor Equipment", weight: 0.58 },
+      { rank: 43, symbol: "6526.T", name: "Socionext", sector: "Semiconductors", weight: 0.56 },
+      { rank: 44, symbol: "6645.T", name: "Omron", sector: "Electronics", weight: 0.54 },
+      { rank: 45, symbol: "6963.T", name: "Rohm", sector: "Semiconductors", weight: 0.52 },
+      { rank: 46, symbol: "6479.T", name: "MinebeaMitsumi", sector: "Electronics", weight: 0.50 },
+      { rank: 47, symbol: "9735.T", name: "Secom", sector: "Security Services", weight: 0.48 },
+      { rank: 48, symbol: "7532.T", name: "Pan Pacific International", sector: "Retail", weight: 0.46 },
+      { rank: 49, symbol: "7267.T", name: "Honda Motor", sector: "Automobiles", weight: 0.44 },
+      { rank: 50, symbol: "7203.T", name: "Toyota Motor", sector: "Automobiles", weight: 0.42 }
+    ];
+
+    const tableBody = document.getElementById("nikkeiTableBody");
+    const statusEl = document.getElementById("nikkeiStatus");
+    const refreshBtn = document.getElementById("refreshNikkeiBtn");
+    const searchInput = document.getElementById("nikkeiSearch");
+
+    let liveRows = [];
+
+    function formatPrice(value) {
+      if (value === null || value === undefined || Number.isNaN(value)) return "—";
+      return new Intl.NumberFormat("ja-JP", {
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 2
+      }).format(value);
+    }
+
+    function formatPercent(value) {
+      if (value === null || value === undefined || Number.isNaN(value)) return "—";
+      const sign = value > 0 ? "+" : "";
+      return `${sign}${value.toFixed(2)}%`;
+    }
+
+    function chunkArray(arr, size) {
+      const chunks = [];
+      for (let i = 0; i < arr.length; i += size) {
+        chunks.push(arr.slice(i, i + size));
+      }
+      return chunks;
+    }
+
+    function renderTable(rows) {
+      const keyword = searchInput.value.trim().toLowerCase();
+
+      const filtered = rows.filter(item =>
+        item.name.toLowerCase().includes(keyword) ||
+        item.symbol.toLowerCase().includes(keyword)
+      );
+
+      if (!filtered.length) {
+        tableBody.innerHTML = `<tr><td colspan="7">No matching companies found.</td></tr>`;
+        return;
+      }
+
+      tableBody.innerHTML = filtered.map(item => {
+        const changeClass =
+          item.changePercent > 0 ? "market-positive" :
+          item.changePercent < 0 ? "market-negative" : "market-flat";
+
+        return `
+          <tr>
+            <td>${item.rank}</td>
+            <td>${item.name}</td>
+            <td>${item.symbol}</td>
+            <td>${item.sector}</td>
+            <td>${item.weight.toFixed(2)}%</td>
+            <td>${formatPrice(item.price)}</td>
+            <td class="${changeClass}">${formatPercent(item.changePercent)}</td>
+          </tr>
+        `;
+      }).join("");
+    }
+
+    async function fetchYahooQuotes(symbolGroup) {
+      const yahooUrl = `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${encodeURIComponent(symbolGroup.join(","))}`;
+      const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(yahooUrl)}`;
+      const response = await fetch(proxyUrl, { cache: "no-store" });
+      if (!response.ok) throw new Error("Quote request failed");
+      return await response.json();
+    }
+
+    async function loadNikkeiQuotes() {
+      statusEl.textContent = "Loading live quotes...";
+      refreshBtn.disabled = true;
+
+      try {
+        const chunks = chunkArray(nikkeiTop50.map(item => item.symbol), 20);
+        const results = await Promise.all(chunks.map(group => fetchYahooQuotes(group)));
+
+        const quoteMap = {};
+        results.forEach(block => {
+          const list = block?.quoteResponse?.result || [];
+          list.forEach(q => {
+            quoteMap[q.symbol] = q;
+          });
+        });
+
+        liveRows = nikkeiTop50.map(item => {
+          const quote = quoteMap[item.symbol] || {};
+          return {
+            ...item,
+            price: quote.regularMarketPrice ?? null,
+            changePercent: quote.regularMarketChangePercent ?? null
+          };
+        });
+
+        renderTable(liveRows);
+        statusEl.textContent = `Last updated: ${new Date().toLocaleString("en-GB")}`;
+      } catch (error) {
+        console.error(error);
+        liveRows = nikkeiTop50.map(item => ({
+          ...item,
+          price: null,
+          changePercent: null
+        }));
+        renderTable(liveRows);
+        statusEl.textContent = "Live quote feed temporarily unavailable";
+      } finally {
+        refreshBtn.disabled = false;
+      }
+    }
+
+    refreshBtn.addEventListener("click", loadNikkeiQuotes);
+    searchInput.addEventListener("input", () => renderTable(liveRows));
+
+    loadNikkeiQuotes();
+    setInterval(loadNikkeiQuotes, 120000);
+  </script>
+</body>
+</html>
