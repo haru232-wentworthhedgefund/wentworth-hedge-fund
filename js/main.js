@@ -1,54 +1,67 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const track = document.querySelector("[data-slider-track]");
-  const prevBtn = document.querySelector("[data-slider-prev]");
-  const nextBtn = document.querySelector("[data-slider-next]");
+const menuToggle = document.querySelector(".menu-toggle");
+const siteNav = document.querySelector(".site-nav");
 
-  if (!track || !prevBtn || !nextBtn) return;
+if (menuToggle && siteNav) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = siteNav.classList.toggle("is-open");
+    menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+}
 
-  const cards = Array.from(track.children);
-  let currentIndex = 0;
+const businessTrack = document.getElementById("businessTrack");
+const businessPrev = document.getElementById("businessPrev");
+const businessNext = document.getElementById("businessNext");
 
-  function getVisibleCards() {
-    if (window.innerWidth <= 860) return 1;
-    if (window.innerWidth <= 1180) return 2;
-    return 3;
+let currentBusinessIndex = 0;
+
+function getVisibleBusinessCards() {
+  if (window.innerWidth <= 860) return 1;
+  if (window.innerWidth <= 1120) return 2;
+  return 3;
+}
+
+function updateBusinessCarousel() {
+  if (!businessTrack || !businessPrev || !businessNext) return;
+
+  const cards = Array.from(businessTrack.querySelectorAll(".business-card"));
+  const visibleCards = getVisibleBusinessCards();
+  const maxIndex = Math.max(0, cards.length - visibleCards);
+
+  if (currentBusinessIndex > maxIndex) {
+    currentBusinessIndex = maxIndex;
   }
 
-  function updateSlider() {
-    const visibleCards = getVisibleCards();
-    const maxIndex = Math.max(0, cards.length - visibleCards);
+  const firstCard = cards[0];
+  if (!firstCard) return;
 
-    if (currentIndex > maxIndex) {
-      currentIndex = maxIndex;
-    }
+  const gap = parseFloat(window.getComputedStyle(businessTrack).gap || "0");
+  const cardWidth = firstCard.getBoundingClientRect().width;
+  const offset = currentBusinessIndex * (cardWidth + gap);
 
-    const firstCard = cards[0];
-    if (!firstCard) return;
+  businessTrack.style.transform = `translateX(-${offset}px)`;
 
-    const cardWidth = firstCard.getBoundingClientRect().width;
-    const gap = parseFloat(getComputedStyle(track).gap || "0");
-    const offset = currentIndex * (cardWidth + gap);
+  businessPrev.disabled = currentBusinessIndex === 0;
+  businessNext.disabled = currentBusinessIndex >= maxIndex;
+}
 
-    track.style.transform = `translateX(-${offset}px)`;
-
-    prevBtn.disabled = currentIndex === 0;
-    nextBtn.disabled = currentIndex >= maxIndex;
-  }
-
-  prevBtn.addEventListener("click", () => {
-    const step = getVisibleCards();
-    currentIndex = Math.max(0, currentIndex - step);
-    updateSlider();
+if (businessPrev && businessNext) {
+  businessPrev.addEventListener("click", () => {
+    currentBusinessIndex = Math.max(0, currentBusinessIndex - getVisibleBusinessCards());
+    updateBusinessCarousel();
   });
 
-  nextBtn.addEventListener("click", () => {
-    const step = getVisibleCards();
-    const maxIndex = Math.max(0, cards.length - getVisibleCards());
-    currentIndex = Math.min(maxIndex, currentIndex + step);
-    updateSlider();
+  businessNext.addEventListener("click", () => {
+    const cards = businessTrack.querySelectorAll(".business-card");
+    const maxIndex = Math.max(0, cards.length - getVisibleBusinessCards());
+
+    currentBusinessIndex = Math.min(
+      maxIndex,
+      currentBusinessIndex + getVisibleBusinessCards()
+    );
+
+    updateBusinessCarousel();
   });
+}
 
-  window.addEventListener("resize", updateSlider);
-
-  updateSlider();
-});
+window.addEventListener("resize", updateBusinessCarousel);
+window.addEventListener("load", updateBusinessCarousel);
