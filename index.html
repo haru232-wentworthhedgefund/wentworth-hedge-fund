@@ -3,576 +3,197 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wentworth Capital | Hedge Fund</title>
-
-  <style>
-    :root {
-      --bg: #07111f;
-      --bg-soft: #0d1b2e;
-      --card: #111f34;
-      --gold: #c8a75a;
-      --gold-light: #e5c878;
-      --text: #f5f7fa;
-      --muted: #9aa8bd;
-      --line: rgba(255,255,255,0.12);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: "Inter", "Segoe UI", Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(1180px, 92%);
-      margin: 0 auto;
-    }
-
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 100;
-      background: rgba(7, 17, 31, 0.86);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .nav {
-      height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      font-size: 22px;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-
-    .logo span {
-      color: var(--gold);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 32px;
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    .nav-links a:hover {
-      color: var(--gold-light);
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 13px 24px;
-      border-radius: 999px;
-      background: var(--gold);
-      color: #09111d;
-      font-weight: 700;
-      transition: 0.25s ease;
-    }
-
-    .btn:hover {
-      background: var(--gold-light);
-      transform: translateY(-2px);
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--text);
-      border: 1px solid var(--line);
-    }
-
-    .btn-outline:hover {
-      border-color: var(--gold);
-      color: var(--gold-light);
-      background: transparent;
-    }
-
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding-top: 76px;
-      background:
-        radial-gradient(circle at 70% 25%, rgba(200, 167, 90, 0.18), transparent 32%),
-        linear-gradient(135deg, #07111f 0%, #0b1a2d 55%, #07111f 100%);
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 64px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      color: var(--gold-light);
-      font-size: 13px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 18px;
-    }
-
-    .hero h1 {
-      font-size: clamp(44px, 6vw, 76px);
-      line-height: 1.05;
-      margin-bottom: 24px;
-    }
-
-    .hero p {
-      max-width: 620px;
-      color: var(--muted);
-      font-size: 18px;
-      margin-bottom: 34px;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .hero-card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      padding: 34px;
-      box-shadow: 0 30px 80px rgba(0,0,0,0.25);
-    }
-
-    .metric {
-      padding: 24px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .metric:last-child {
-      border-bottom: none;
-    }
-
-    .metric strong {
-      display: block;
-      font-size: 36px;
-      color: var(--gold-light);
-    }
-
-    .metric span {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    section {
-      padding: 100px 0;
-    }
-
-    .section-title {
-      max-width: 720px;
-      margin-bottom: 52px;
-    }
-
-    .section-title h2 {
-      font-size: clamp(32px, 4vw, 48px);
-      margin-bottom: 16px;
-    }
-
-    .section-title p {
-      color: var(--muted);
-      font-size: 17px;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      padding: 32px;
-      transition: 0.25s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(200, 167, 90, 0.5);
-    }
-
-    .card .number {
-      color: var(--gold-light);
-      font-size: 15px;
-      margin-bottom: 18px;
-    }
-
-    .card h3 {
-      font-size: 22px;
-      margin-bottom: 14px;
-    }
-
-    .card p {
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .split {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    .panel {
-      background: var(--bg-soft);
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      padding: 42px;
-    }
-
-    .list {
-      display: grid;
-      gap: 20px;
-    }
-
-    .list-item {
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-    }
-
-    .dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: var(--gold);
-      margin-top: 8px;
-      flex: none;
-    }
-
-    .list-item h4 {
-      margin-bottom: 4px;
-    }
-
-    .list-item p {
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .cta {
-      background:
-        linear-gradient(135deg, rgba(200,167,90,0.16), rgba(255,255,255,0.03)),
-        var(--bg-soft);
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      text-align: center;
-    }
-
-    .cta h2 {
-      font-size: clamp(32px, 4vw, 52px);
-      margin-bottom: 18px;
-    }
-
-    .cta p {
-      color: var(--muted);
-      max-width: 680px;
-      margin: 0 auto 34px;
-    }
-
-    footer {
-      padding: 42px 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .footer-grid {
-      display: flex;
-      justify-content: space-between;
-      gap: 24px;
-      border-top: 1px solid var(--line);
-      padding-top: 28px;
-    }
-
-    .disclaimer {
-      max-width: 760px;
-      font-size: 12px;
-      color: #7f8da3;
-    }
-
-    .menu-btn {
-      display: none;
-      background: none;
-      border: 1px solid var(--line);
-      color: var(--text);
-      padding: 8px 12px;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-
-    @media (max-width: 860px) {
-      .menu-btn {
-        display: block;
-      }
-
-      .nav-links {
-        position: absolute;
-        top: 76px;
-        left: 0;
-        right: 0;
-        background: #07111f;
-        border-bottom: 1px solid var(--line);
-        flex-direction: column;
-        padding: 24px;
-        display: none;
-      }
-
-      .nav-links.active {
-        display: flex;
-      }
-
-      .hero-grid,
-      .split {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding: 140px 0 80px;
-      }
-
-      .cards {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-grid {
-        flex-direction: column;
-      }
-    }
-  </style>
+  <title>Wentworth Hedge Fund</title>
+  <meta
+    name="description"
+    content="Wentworth Hedge Fund is a research-driven investment firm focused on disciplined capital stewardship, market intelligence, and institutional risk management."
+  />
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
+<body class="home-page">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="./index.html" class="site-brand" aria-label="Wentworth Hedge Fund home">
+        <span class="brand-main">Wentworth</span>
+        <span class="brand-sub">Hedge Fund</span>
+      </a>
 
-<body>
-  <header>
-    <div class="container nav">
-      <a href="#" class="logo">Wentworth<span>.</span></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="navMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-      <button class="menu-btn" onclick="toggleMenu()">Menu</button>
-
-      <nav class="nav-links" id="navLinks">
-        <a href="#about">About</a>
-        <a href="#strategy">Strategy</a>
-        <a href="#risk">Risk Management</a>
-        <a href="#contact">Contact</a>
+      <nav class="site-nav" id="navMenu">
+        <ul class="nav-menu">
+          <li><a href="./pages/what-we-do.html" class="nav-link">What We Do</a></li>
+          <li><a href="./pages/insights.html" class="nav-link">Insights</a></li>
+          <li><a href="./pages/market-intelligence.html" class="nav-link">Market Intelligence</a></li>
+          <li><a href="./pages/our-firm.html" class="nav-link">Our Firm</a></li>
+          <li><a href="./pages/careers.html" class="nav-link">Careers</a></li>
+          <li><a href="./pages/client-login.html" class="nav-link nav-link-button">Client Login</a></li>
+        </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero-home">
+      <div class="hero-overlay"></div>
       <div class="container hero-grid">
-        <div>
-          <div class="eyebrow">Independent Investment Management</div>
-          <h1>Disciplined capital allocation for changing markets.</h1>
-          <p>
-            Wentworth Capital is a private investment firm focused on absolute returns,
-            rigorous risk management, and long-term capital preservation.
+        <div class="hero-content">
+          <p class="eyebrow">Wentworth Hedge Fund</p>
+          <h1 class="hero-title">
+            Navigating global markets with disciplined capital stewardship.
+          </h1>
+          <p class="hero-text">
+            Wentworth Hedge Fund is an independent investment firm focused on research-driven
+            strategies, institutional risk management, and long-term partnership with clients.
           </p>
-
           <div class="hero-actions">
-            <a href="#strategy" class="btn">Our Strategy</a>
-            <a href="#contact" class="btn btn-outline">Request Access</a>
+            <a href="./pages/insights.html" class="btn btn-light">Explore Insights</a>
+            <a href="./pages/our-firm.html" class="btn btn-outline-light">About the Firm</a>
           </div>
         </div>
 
-        <div class="hero-card">
-          <div class="metric">
-            <strong>Global</strong>
-            <span>Multi-asset market coverage</span>
+        <div class="hero-panel">
+          <div class="hero-panel-item">
+            <span class="hero-panel-label">Global Perspective</span>
+            <p>Cross-asset thinking informed by macroeconomic, geopolitical, and market structure analysis.</p>
           </div>
-          <div class="metric">
-            <strong>Risk-first</strong>
-            <span>Portfolio construction framework</span>
+          <div class="hero-panel-item">
+            <span class="hero-panel-label">Risk Discipline</span>
+            <p>Institutional frameworks for exposure management, liquidity awareness, and scenario review.</p>
           </div>
-          <div class="metric">
-            <strong>Long-term</strong>
-            <span>Institutional investment discipline</span>
+          <div class="hero-panel-item">
+            <span class="hero-panel-label">Long-Term Partnership</span>
+            <p>A measured, research-led approach to capital stewardship across changing market cycles.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="about">
+    <section class="section light-section">
       <div class="container">
-        <div class="section-title">
-          <div class="eyebrow">About Wentworth</div>
-          <h2>A research-driven investment platform.</h2>
-          <p>
-            We combine fundamental research, macro analysis, and systematic risk controls
-            to identify asymmetric opportunities across liquid public markets.
+        <div class="section-header">
+          <p class="section-kicker">Featured</p>
+          <h2 class="section-title">A focused institutional platform.</h2>
+          <p class="section-description">
+            Explore our capabilities, market commentary, and firm overview through dedicated pages.
           </p>
         </div>
 
-        <div class="cards">
-          <div class="card">
-            <div class="number">01</div>
-            <h3>Fundamental Research</h3>
+        <div class="feature-grid">
+          <article class="feature-card feature-card-large">
+            <p class="card-kicker">Insights</p>
+            <h3>Market views, macro commentary, and research perspectives.</h3>
             <p>
-              Bottom-up security analysis supported by sector expertise, valuation work,
-              and business quality assessment.
+              Access thought leadership across macroeconomics, geopolitics, digital assets,
+              AI, and broader market developments.
             </p>
-          </div>
+            <a href="./pages/insights.html" class="text-link">Explore Insights</a>
+          </article>
 
-          <div class="card">
-            <div class="number">02</div>
-            <h3>Macro Awareness</h3>
+          <article class="feature-card">
+            <p class="card-kicker">What We Do</p>
+            <h3>Integrated capabilities across asset management and capital markets.</h3>
             <p>
-              Portfolio decisions are informed by liquidity conditions, monetary policy,
-              global growth trends, and market structure.
+              Learn more about our platform across investment strategies, financing,
+              underwriting, operations, and institutional services.
             </p>
-          </div>
+            <a href="./pages/what-we-do.html" class="text-link">View Capabilities</a>
+          </article>
 
-          <div class="card">
-            <div class="number">03</div>
-            <h3>Capital Preservation</h3>
+          <article class="feature-card">
+            <p class="card-kicker">Market Intelligence</p>
+            <h3>Structured market information and dashboard-style coverage.</h3>
             <p>
-              Downside control, position sizing, and liquidity management are embedded
-              throughout the investment process.
+              Review sample indicators, cross-asset positioning ideas, economic calendars,
+              and market snapshots in a clean institutional layout.
             </p>
-          </div>
+            <a href="./pages/market-intelligence.html" class="text-link">Open Market Intelligence</a>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="strategy">
-      <div class="container split">
-        <div class="section-title">
-          <div class="eyebrow">Investment Strategy</div>
-          <h2>Focused on durable alpha and controlled exposure.</h2>
-          <p>
-            Our framework is designed to balance conviction with flexibility,
-            allowing the portfolio to adapt as market regimes evolve.
-          </p>
-        </div>
-
-        <div class="panel">
-          <div class="list">
-            <div class="list-item">
-              <div class="dot"></div>
-              <div>
-                <h4>Long / Short Equity</h4>
-                <p>Identifying mispriced businesses while managing net and gross exposure.</p>
-              </div>
-            </div>
-
-            <div class="list-item">
-              <div class="dot"></div>
-              <div>
-                <h4>Event-Driven Opportunities</h4>
-                <p>Selective positioning around catalysts, corporate actions, and market dislocations.</p>
-              </div>
-            </div>
-
-            <div class="list-item">
-              <div class="dot"></div>
-              <div>
-                <h4>Macro Overlay</h4>
-                <p>Dynamic hedging and exposure adjustment based on rates, credit, FX, and volatility signals.</p>
-              </div>
-            </div>
-
-            <div class="list-item">
-              <div class="dot"></div>
-              <div>
-                <h4>Liquidity Discipline</h4>
-                <p>Preference for transparent, liquid markets with clear exit frameworks.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="risk">
+    <section class="section white-section">
       <div class="container">
-        <div class="section-title">
-          <div class="eyebrow">Risk Management</div>
-          <h2>Risk is managed before capital is deployed.</h2>
-          <p>
-            Our process emphasizes scenario analysis, drawdown control, portfolio-level stress testing,
-            and ongoing review of factor exposures.
-          </p>
+        <div class="section-header">
+          <p class="section-kicker">Our Firm</p>
+          <h2 class="section-title">Built around rigor, perspective, and responsible execution.</h2>
         </div>
 
-        <div class="cards">
-          <div class="card">
-            <div class="number">A</div>
-            <h3>Position Sizing</h3>
-            <p>Every position is sized according to conviction, volatility, liquidity, and downside risk.</p>
-          </div>
-
-          <div class="card">
-            <div class="number">B</div>
-            <h3>Exposure Limits</h3>
-            <p>Net, gross, sector, factor, and single-name exposures are actively monitored.</p>
-          </div>
-
-          <div class="card">
-            <div class="number">C</div>
-            <h3>Stress Testing</h3>
-            <p>Portfolios are evaluated against historical shocks and forward-looking market scenarios.</p>
-          </div>
+        <div class="three-column-grid">
+          <article class="simple-card">
+            <h3>Research-Driven</h3>
+            <p>
+              Our process emphasizes structured analysis, careful review, and a global market lens.
+            </p>
+          </article>
+          <article class="simple-card">
+            <h3>Institutional Mindset</h3>
+            <p>
+              We focus on risk discipline, capital stewardship, and professional communication.
+            </p>
+          </article>
+          <article class="simple-card">
+            <h3>Long-Term Orientation</h3>
+            <p>
+              We believe durable relationships are built through consistency, clarity, and measured judgment.
+            </p>
+          </article>
         </div>
-      </div>
-    </section>
-
-    <section class="cta" id="contact">
-      <div class="container">
-        <h2>Access is available to qualified investors.</h2>
-        <p>
-          For investor relations, partnership inquiries, or additional information,
-          please contact the Wentworth Capital team.
-        </p>
-        <a href="mailto:investorrelations@wentworthcapital.com" class="btn">
-          Contact Investor Relations
-        </a>
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <div class="container footer-grid">
-      <div>
-        <strong>Wentworth Capital</strong><br />
-        Private Investment Management
+      <div class="footer-brand-column">
+        <a href="./index.html" class="footer-brand">Wentworth Hedge Fund</a>
+        <p class="footer-note">
+          Independent investment firm with a research-driven, globally informed, and
+          institutionally disciplined approach.
+        </p>
       </div>
 
-      <p class="disclaimer">
-        This website is for informational purposes only and does not constitute an offer
-        to sell or a solicitation of an offer to buy any securities or investment advisory
-        services. Investment involves risk, including possible loss of principal.
+      <div class="footer-column">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="./pages/what-we-do.html">What We Do</a></li>
+          <li><a href="./pages/insights.html">Insights</a></li>
+          <li><a href="./pages/market-intelligence.html">Market Intelligence</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Firm</h4>
+        <ul>
+          <li><a href="./pages/our-firm.html">Our Firm</a></li>
+          <li><a href="./pages/careers.html">Careers</a></li>
+          <li><a href="./pages/client-login.html">Client Login</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:info@wentworthhedgefund.com">info@wentworthhedgefund.com</a></li>
+          <li><a href="mailto:careers@wentworthhedgefund.com">careers@wentworthhedgefund.com</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© <span id="currentYear"></span> Wentworth Hedge Fund. All rights reserved.</p>
+      <p class="footer-legal">
+        This website is for informational purposes only. Nothing on this site constitutes
+        investment advice, an offer to sell, or a solicitation to buy any security or service.
       </p>
     </div>
   </footer>
 
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById("navLinks");
-      nav.classList.toggle("active");
-    }
-  </script>
+  <script src="./js/main.js"></script>
 </body>
 </html>
